@@ -1,0 +1,48 @@
+﻿@using Microsoft.AspNet.Identity
+@using MedicalServece.Models
+@if (Request.IsAuthenticated)
+{
+    using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = " navbar-left" }))
+    {
+        var db = new ApplicationDbContext();
+
+        var ID = User.Identity.GetUserId();
+        var user = db.Users.Where(u => u.Id == ID).SingleOrDefault();
+        @Html.AntiForgeryToken()
+
+    <ul class="nav navbar-nav navbar-right">
+        <li><a class="line" href="#"></a></li>
+        <li class="dropdown">
+            <a href="#" class="dropdown-toggle line" data-toggle="dropdown">@user.FullUserName<span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                @if (User.IsInRole("مستخدم"))
+                {
+                    <li><a class="line tab" href="~/Account/GetProfile">ملفي الشخصي</a></li>
+                }
+                else if (User.IsInRole("طبيب"))
+                {
+                    <li><a class="line tab" href="~/Account/DRProfile">ملفي الشخصي</a></li>
+                }
+                else if (User.IsInRole("ممرض"))
+                {
+                    <li><a class="line tab" href="~/Account/NRProfile">ملفي الشخصي</a></li>
+                }
+                else if (User.IsInRole("Admin"))
+                {
+                    <li><a class="line tab" href="~/Home/CRoom">ملفي الشخصي</a></li>
+                }
+                <li><a class="line tab" href="javascript:document.getElementById('logoutForm').submit()">الخروج</a></li>
+
+            </ul>
+        </li>
+    </ul>
+    }
+}
+else
+{
+    <ul class="nav navbar-nav navbar-left">
+        
+            <li><a class="line" href="~/Account/Register"><i class="fa fa-pencil-square-o" aria-hidden="true"></i><span class="icon-login">تسجيل</span></a></li>
+            <li><a class="line" href="~/Account/Login"><i class="fa fa-sign-in" aria-hidden="true"></i><span class="icon-login">دخول</span></a></li>
+    </ul>
+}

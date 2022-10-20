@@ -1,0 +1,50 @@
+﻿@model IEnumerable<MedicalServece.Models.RadiationLabContent>
+
+@{
+    ViewBag.Title = "GetAllRadiationLabContent";
+    Layout = "~/Views/Shared/_Manage.cshtml";
+}
+
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fas fa-table"></i>
+        Radiation Content
+        <a href="../Radiation/CreateRadiationLabContent" class="btn btn-info pull-right fa fa-plus">Add New</a>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Radiation Content</th>
+                        <th>Radiation Category</th>
+                        <th>Action</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelitem=>item.RC_Content)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelitem => item.Rcategory.RC_category)
+                            </td>
+                            <td>
+
+                                @Html.ActionLink("Edit", "EditRadiationLabContent", new { Code = item.RC_Code}) |
+                                @Html.ActionLink("Delete", "DeleteRadiationLabContent", new { Code = item.RC_Code })
+                                
+                            </td>
+
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

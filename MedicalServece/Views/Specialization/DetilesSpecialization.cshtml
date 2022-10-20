@@ -1,0 +1,26 @@
+﻿@model MedicalServece.Models.MajorSpecialization
+
+@{
+    ViewBag.Title = "DetilesSpecialization";
+    Layout = "~/Views/Shared/_Manage.cshtml";
+}
+
+<div class="card mb-3">
+    <div class="card-header">
+        @Html.DisplayFor(mode => Model.Title)
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+
+            @foreach (var item in Model.subSpecialization)
+            {
+                <span class="btn btn-default border ">
+                    @Html.DisplayFor(modelitem => item.Title)
+                </span>
+            }
+        </div>
+    </div>
+    <p class="card-footer">
+        @Html.ActionLink("Back to List", "GetMajorSpecialization")
+    </p>
+</div>

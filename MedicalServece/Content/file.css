@@ -1,0 +1,204 @@
+.section-up{
+    padding-top:80px;
+}
+.section-up .slider{
+    background-image:url(../images/service-bg.png);
+    height:260px;
+}
+.section-up #upload{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.section-up #upload .file {
+    background: #fff;
+    height: 322px;
+    display: block;
+    position: absolute;
+    top: 130px;
+    box-shadow: 1px 1px 10px 0px #ddd;
+}
+.section-up #upload .won{
+    width:100% !important;
+}
+.section-up #upload .file .file-info .title-personal
+{
+    padding-top: 15px;
+}
+.section-up #upload .file .file-info .title-personal #word , .section-up #upload .file .file-info .img-personal ul li h3{
+    font-size: 20px;
+    font-weight: 700;
+    color: #006492;
+}
+.section-up #upload .file .file-info .title-personal #word span{
+    border-bottom: 3px solid #31a5d6;
+    font-size: 17px;
+    padding-bottom: 1px;
+    color: #a8a8a3;
+    margin-left: 10px
+}
+.section-up #upload .file .file-info .img-personal{
+    padding-top: 40px;
+}
+.section-up #upload .file .file-info .img-personal #picture{
+    width: 125px;
+    border: 3px solid #a8a8a3;
+    border-bottom-color: #006492;
+    border-radius: 50%;
+    box-shadow: 1px 1px 5px 1px;
+    margin-right: 0;
+}
+.section-up #upload .file .file-info .img-personal ul {
+    padding:0;
+}
+.section-up #upload .file .file-info .img-personal ul li {
+    display: inline-block
+}
+.section-up #upload .file .file-info .img-personal ul li h3{
+    margin-right: 20px;
+}
+.section-up #upload .file .file-info .img-personal ul li #edit-img{
+    width: 100px;
+    height: 45px;
+    font-weight: bold;
+    font-size: 17px;
+    background: #31a5d6;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    color: #fff;
+    margin-right: 15px;
+    padding: 10px;
+    text-decoration: none;
+}
+.section-up #upload .file .file-info .choose-section{
+    padding-top: 20px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #31a5d6;
+    box-shadow: 1px 1px 5px #a8a8a3;
+}
+.section-up #upload .file .file-info .choose-section ul{
+}
+.section-up #upload .file .file-info .choose-section ul li{
+    display: inline-block;
+    background:#f3f3f4;
+    margin-left: 10px;
+    padding: 12px;     
+}
+.section-up #upload .file .file-info .choose-section ul li:hover{
+    border-bottom: 3px solid #006492;
+    cursor: pointer;   
+}
+.section-up #upload .file #about {
+    background: yellow;
+}
+.section-up #upload .file #contact {
+    background: #a8a8a3;
+}
+.section-up #upload .file #subject {
+    background: gray;
+}
+.section-up #upload .file #reports-pdf , .section-up #upload .file #reports-img-analysis , .section-up #upload .file #reports-img-X-x  , .section-up #upload .file #prescription-patients{
+    background:#f3f1f1;
+
+}
+.section-up #upload .file  form input[type="file"]{
+    display: none;
+}
+.section-up #upload .file  .num{
+    margin-right: 20px;
+     margin-bottom:15px;
+}
+.section-up #upload .file  form #get-app{
+    color:#fff;
+    height: 60px;
+    width: 250px;
+    background:aqua;
+    font-size: 20px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 18px;
+    right: 85px;
+    margin-bottom: 50px;
+}
+.section-up #upload .file .choose-section .tabs .reports-pdf ,.section-up #upload .file .choose-section .tabs .reports-img-X-x , .section-up #upload .file .choose-section .tabs .reports-img-analysis ,.section-up #upload .file .choose-section .tabs .prescription-patients{
+    border-bottom: 3px solid #006492;
+}
+
+
+
+
+
+.ro-w{
+    display:inherit !important;
+    margin-bottom: 0 !important;
+}
+.spam{
+        height: 1015px!important;
+}
+.section-up #upload .file  .choose-section .tabs-account li a{
+    text-decoration: none;
+}
+.section-up #upload .file  .week{
+    margin-bottom: 25px;
+}
+.section-up #upload .file  .view-info{
+    background:#fff;
+}
+.section-up #upload .file  .view-info ul li{
+    font-size:20px;
+    list-style: none;
+    padding-top: 15px;
+    border-bottom: 1px solid #dadada;
+    padding-bottom: 15px;
+    font-weight: 600;
+    color:#006492;
+}
+.section-up #upload .file  .view-info ul li #secret{
+    text-align: center;
+    float: left;
+    padding-left: 35px;
+    color:#a8a8a3 !important;
+    font-size:18px !important;
+
+}
+
+
+
+
+
+
+/* start media profile  */
+
+
+@media (max-width:767px){
+    .section-up #upload .file{
+    height: 415px;
+    }
+    .spam{
+      height:1045px!important;
+}
+}
+@media (min-width:992px) and (max-width:1199px){
+     .section-up #upload .file{
+     height: 325px;
+    }
+    .spam{
+    height: 1015px!important;
+} 
+}
+@media (min-width:768px) and (max-width:991px){
+      .section-up #upload .file{
+        height: 345px;
+    }
+    .spam{
+      height:1040px!important;
+}
+}
+/* end media profile   */
+
+
+

@@ -1,0 +1,41 @@
+﻿@model IEnumerable<MedicalServece.Models.FileForDr>
+
+@{
+    ViewBag.Title = "GetFileSended";
+    Layout = "~/Views/Shared/_Manage.cshtml";
+}
+
+<div class="card mb-3">
+
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table " id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>اسم المريض</th>
+                        <th>تاريخ الارسال</th>
+                        <th>الملف</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.user.FullUserName)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.SendDate)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Details", "pateintDetailes", new { url = item.Pa_URL })
+                            </td>
+                        </tr>
+
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

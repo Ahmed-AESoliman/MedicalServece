@@ -1,0 +1,456 @@
+﻿@model MedicalServece.Models.Clinic
+
+@{
+    ViewBag.Title = "EditClinic";
+    Layout = "~/Views/Shared/_Manage.cshtml";
+}
+<style>
+    
+/* #2 start file clinic */
+.clinic{
+    height:100%;
+}
+.clinic .clinic-address{
+    margin-bottom: 32px;
+    text-align:right
+}
+.clinic .clinic-address1{
+    text-align:right
+}
+.clinic .clinic-address ul{
+   padding-right: 16px;
+}
+.clinic .clinic-address ul li{
+    display:inline-block;
+    color: #006492;
+}
+.clinic .clinic-address ul #address{
+    font-weight: 100;
+    font-size: 31px;
+    margin-right: 6px;
+}
+.clinic .clinic-address ul li span{
+ border-bottom: 2px solid #31a5d6;
+}
+.clinic .clinic-address ul li .btn-cl{
+    width: 100px;
+    height: 45px;
+    font-weight: bold;
+    font-size: 17px;
+    background: #31a5d6;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    margin-right: 70px;
+}
+.clinic .clinic-address1 ul li {
+     display:inline-block;
+     color: #3498DB;
+}
+.clinic .clinic-address1 ul li select
+{
+   border: .5px solid #a8a8a3;
+    outline: none;
+    width: 92%;
+    color: #31a5d6;
+    height: 45px;
+    font-size: 18px;
+    margin-left: 140px;
+    box-shadow: -1px 1px 1px #ddd;
+    border-radius: 4px;
+    padding-right: 10px;
+}
+.clinic .clinic-address1 ul li select option #{
+    color: gray;
+}
+.clinic .clinic-address1 ul li #addr1{
+    border: .5px solid #a8a8a3;
+    outline: none;
+    height: 45px;
+    color: #696363;
+    font-size: 18px;
+    margin-left: 16px;
+    box-shadow: -1px 1px 1px #ddd;
+    border-radius: 4px;
+    padding-right: 10px;
+}
+.clinic .clinic-address1 ul li #addr2{
+    border: .5px solid #a8a8a3;
+    outline: none;
+    height: 45px;
+    color:#696363;
+    font-size: 18px;
+    box-shadow: -1px 1px 1px #ddd;
+    border-radius: 4px;
+    padding-right: 10px;
+    width: 55px;
+    margin-left: 10px;   
+}
+.clinic .clinic-address1 ul li #addr3{
+    border: .5px solid #a8a8a3;
+    outline: none;
+    height: 45px;
+    color: #696363;
+    font-size: 18px;
+    box-shadow: -1px 1px 1px #ddd;
+    border-radius: 4px;
+    padding-right: 10px;
+    width: 260px;
+    margin-top: 25px;
+}
+.clinic .clinic-address1  input::-webkit-input-placeholder {
+    color: #31a5d6 !important;
+}
+.clinic .clinic-address1 input:-moz-input-placeholder {
+    color: #31a5d6 !important;
+}
+.clinic .clinic-address1 input::-moz-input-placeholder {
+    color: #31a5d6 !important;
+}
+.clinic .clinic-address1 input:-ms-input-placeholder {
+    color: #31a5d6 !important;
+}
+.clinic .clinic-address1 input:-o-input-placeholder {
+    color: #31a5d6 !important;
+}
+.clinic .clinic-address1 input:input-placeholder {
+    color: #29b6f6 !important;
+}
+.clinic .clinic-info{
+    margin-top: 50px;
+    text-align:right;
+}
+.clinic .clinic-info1{
+    text-align:right
+}
+.clinic .clinic-info ul{
+   padding-right: 16px;
+}
+.clinic .clinic-info ul li{
+    display:inline-block;
+    color: #006492;
+}
+.clinic .clinic-info ul #address{
+
+    font-weight: 100;
+    font-size: 31px;
+    margin-right: 6px;
+}
+.clinic .clinic-info ul li span{
+ border-bottom: 2px solid #31a5d6;
+}
+.clinic .clinic-info ul li .btn-cl{
+    width: 100px;
+    height: 45px;
+    font-weight: bold;
+    font-size: 17px;
+    background: #31a5d6;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    margin-right: 70px;
+}
+.clinic .clinic-info1 ul li{
+    display:inline-block;
+     color: #3498DB;
+}
+.clinic .clinic-info1 ul li #addr3{
+    border: .5px solid #a8a8a3;
+    outline: none;
+    height: 45px;
+    color: #696363;
+    font-size: 18px;
+    box-shadow: -1px 1px 1px #ddd;
+    border-radius: 4px;
+    padding-right: 10px;
+    width: 260px;
+    margin-top: 25px;
+    margin-left: 15px;
+}
+.clinic .clinic-info1 ul li #addr4 {
+    border: .5px solid #a8a8a3;
+    outline: none;
+    height: 45px;
+    color: #696363;
+    font-size: 18px;
+    box-shadow: -1px 1px 1px #ddd;
+    border-radius: 4px;
+    padding-right: 10px;
+    width: 120px;
+    margin-top: 25px;
+}
+.clinic .clinic-info1  input::-webkit-input-placeholder {
+    color:#31a5d6 !important;
+}
+.clinic .clinic-info1 input:-moz-input-placeholder {
+    color:#31a5d6 !important;
+}
+.clinic .clinic-info1 input::-moz-input-placeholder {
+    color:#31a5d6 !important;
+}
+.clinic .clinic-info1 input:-ms-input-placeholder {
+    color:#31a5d6 !important;
+}
+.clinic .clinic-info1 input:-o-input-placeholder {
+    color:#31a5d6 !important;
+}
+.clinic .clinic-info1 input:input-placeholder {
+    color:#31a5d6 !important;
+}
+.clinic .clinic-time{
+    margin-top: 50px;
+}
+.clinic .clinic-time ul{
+   padding-right: 16px;
+}
+.clinic .clinic-time ul li{
+    display:inline-block;
+    color: #006492;
+}
+.clinic .clinic-time ul #address{
+    font-weight: 100;
+    font-size: 31px;
+    margin-right: 6px;
+}
+.clinic .clinic-time ul li span{
+ border-bottom: 2px solid #31a5d6;
+}
+.clinic .clinic-time ul li .btn-cl{
+    width: 100px;
+    height: 45px;
+    font-weight: bold;
+    font-size: 17px;
+    background: #31a5d6;
+    border-radius: 4px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    margin-right: 70px;
+}
+.clinic .clinic-time1{
+    border: 0.3px solid #a8a8a3;
+    width: 42%;
+    margin-right: 70px;
+    margin-top: 35px;
+    padding-top: 10px;
+    box-shadow: -1px 1px 1px #ddd;
+}
+.clinic .clinic-time1 string{
+     color: #006492;
+    font-size: 21px;
+    margin-right: 10px;
+}
+.clinic .clinic-time1 string span{
+    border-bottom: 2px solid #31a5d6;
+}
+.clinic .clinic-time1 ul li{
+     display:inline-block;
+     color: #31a5d6;
+     margin-top: 10px;
+     width: 30%;   
+}
+.clinic .clinic-time1 ul li input[type=checkbox]{
+    display: none;
+   
+}
+.clinic .clinic-time1 ul li input[type=checkbox] + label:before{
+    content: "\2714";
+    border: 0.1em solid #a8a8a3;
+    border-radius: 0.2em;
+    width: 18px;
+    height: 7px;
+    display: inline-block;
+    padding-right: 1px;
+    padding-bottom: 18px;
+    margin-right: 13px;
+    vertical-align: bottom;
+    color: transparent;
+    transition: 0.2s;
+    font-size: 16px;
+    cursor: pointer;
+}
+.clinic .clinic-time1 ul li input[type=checkbox]:checked + label:before{
+    border-color:#31a5d6;
+    color:#696363;
+}
+.clinic .clinic-time1 ul li input[type=checkbox] + label:active :before{
+    transform: scale(0);
+}
+.clinic .clinic-time1 ul li .between-span{
+    margin-right: 10px;
+}
+.clinic .clinic-time2{
+    border: 0.3px solid #a8a8a3;
+    width: 42%;
+    margin-right: 70px;
+    margin-top: 35px;
+    padding-top: 10px;
+    box-shadow: -1px 1px 1px #ddd;
+    margin-bottom: 40px;
+}
+.clinic .clinic-time2 string{
+     color: #006492;
+    font-size: 21px;
+    margin-right: 10px;
+}
+.clinic .clinic-time2 string span{
+    border-bottom: 2px solid #31a5d6;
+}
+.clinic .clinic-time2 ul{
+    text-align: center;
+}
+.clinic .clinic-time2 ul li{
+     display:inline-block;
+     color: #3498DB;
+}
+.clinic .clinic-time2 ul li .border{
+    border-left: 1px solid #3498DB;
+    padding: 11px 0 11px 0;
+}
+.clinic .clinic-time2 ul li #addr5{
+    border: .5px solid #a8a8a3;
+    outline: none;
+    height: 36px;
+    font-size: 23px;
+    box-shadow: -1px 1px 1px #ddd;
+    border-radius: 4px;
+    text-align: center;
+    width: 47px;
+    margin-left: 10px;
+    color:#696363;
+}
+.clinic .clinic-time2 ul li #addr6{
+   border: .5px solid #a8a8a3;
+    outline: none;
+    height: 45px;
+    color: #696363;
+    font-size: 23px;
+    box-shadow: -1px 1px 1px #ddd;
+    border-radius: 4px;
+    text-align: center;
+    width: 65px;
+    margin-left: 40px;
+}
+.clinic .clinic-time2 ul li #addr7{
+   border: .5px solid #a8a8a3;
+    outline: none;
+    height: 45px;
+    color: #696363;
+    font-size: 23px;
+    box-shadow: -1px 1px 1px #ddd;
+    border-radius: 4px;
+    text-align: center;
+    width: 65px;
+    margin-left: 10px;
+    margin-right: 40px;
+}
+.clinic .clinic-time2 ul li #addr8{
+    border: .5px solid #a8a8a3;
+    outline: none;
+    height: 36px;
+    font-size: 23px;
+    box-shadow: -1px 1px 1px #ddd;
+    border-radius: 4px;
+    text-align: center;
+    width: 47px;
+    color:#696363;
+}
+.clinic .clinic-time2  input::-webkit-input-placeholder {
+    color: #31a5d6 !important;
+}
+.clinic .clinic-time2 input:-moz-input-placeholder {
+    color: #31a5d6 !important;
+}
+.clinic .clinic-time2 input::-moz-input-placeholder {
+    color: #31a5d6 !important;
+}
+.clinic .clinic-time2 input:-ms-input-placeholder {
+    color: #31a5d6 !important;
+}
+.clinic .clinic-time2 input:-o-input-placeholder {
+    color: #31a5d6 !important;
+}
+.clinic .clinic-time2 input:input-placeholder {
+    color: #31a5d6 !important;
+}
+/* #2 end file clinic */
+
+</style>
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="clinic"dir="rtl">
+        <div class="clinic-address">
+            <ul>
+                <li><img src="~/images/icons8-home-address-48.png" width="30px"></li>
+                <li id="address"><span>العن</span>وان</li>
+            </ul>
+        </div>
+        <div class="clinic-address1">
+            <ul>
+
+                <li>
+                    @Html.EditorFor(model => model.City, new { htmlAttributes = new { id = "addr1", placeholder = "المحافظه" } })
+                    @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+                </li>
+                <li>
+                    @Html.EditorFor(model => model.ClinicArea, new { htmlAttributes = new { id = "addr1", placeholder = "المنطقه" } })
+                    @Html.ValidationMessageFor(model => model.ClinicArea, "", new { @class = "text-danger" })
+                </li>
+                <li>
+                    @Html.EditorFor(model => model.ClinicStreat, new { htmlAttributes = new { id = "addr1", placeholder = "رقم/اسم الشارع" } })
+                    @Html.ValidationMessageFor(model => model.ClinicStreat, "", new { @class = "text-danger" })
+
+                </li>
+                <li>
+                    @Html.EditorFor(model => model.BuldingNumber, new { htmlAttributes = new { id = "addr1", placeholder = "رقم المبنى" } })
+                    @Html.ValidationMessageFor(model => model.BuldingNumber, "", new { @class = "text-danger" })
+
+                </li>
+                <li>
+                    @Html.EditorFor(model => model.Floor, new { htmlAttributes = new { id = "addr2", placeholder = "الدور" } })
+                    @Html.ValidationMessageFor(model => model.Floor, "", new { @class = "text-danger" })
+                </li>
+                <li>
+                    @Html.EditorFor(model => model.SpecialMarque, new { htmlAttributes = new { id = "addr3", placeholder = "علامه مميزه" } })
+                    @Html.ValidationMessageFor(model => model.SpecialMarque, "", new { @class = "text-danger" })
+                </li>
+            </ul>
+        </div>
+        <div class="clinic-info">
+            <ul>
+                <li><img src="~/images/icons8-download-from-the-cloud-50.png" width="30px"></li>
+                <li id="address"><span>البيان</span>ات</li>
+            </ul>
+        </div>
+        <div class="clinic-info1">
+            <ul>
+                <li>
+                    @Html.EditorFor(model => model.ClinicName, new { htmlAttributes = new { id = "addr3", placeholder = "اسم العياده" } })
+                    @Html.ValidationMessageFor(model => model.ClinicName, "", new { @class = "text-danger" })
+                </li>
+                <li>
+                    @Html.EditorFor(model => model.ClininPhone, new { htmlAttributes = new { id = "addr3", placeholder = "رقم الهاتف" } })
+                    @Html.ValidationMessageFor(model => model.ClininPhone, "", new { @class = "text-danger" })
+                </li>
+                <li>
+                    @Html.EditorFor(model => model.BookingPrice, new { htmlAttributes = new { id = "addr4", placeholder = "سعر الحجز" } })
+                    @Html.ValidationMessageFor(model => model.BookingPrice, "", new { @class = "text-danger" })
+                </li>
+            </ul>
+        </div>
+    </div>
+     
+    <div class="form-group">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="تعديل" class="btn btn-primary" />
+        </div>
+    </div>
+
+}

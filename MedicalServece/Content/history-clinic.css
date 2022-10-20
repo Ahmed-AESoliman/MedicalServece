@@ -1,0 +1,144 @@
+.clinic-mangement {
+    padding-top: 100px;
+    background: #f5f5f5;
+    height: 800px;
+}
+.clinic-mangement .clinic-mangement-info{
+    background:#ececec;
+    height: 60px;
+    box-shadow: -4px 0px 2px 0px;
+}
+.clinic-mangement .clinic-mangement-info .list-clinic{
+    margin-top: 30px;
+    color:#006492
+}
+.clinic-mangement .clinic-mangement-info ul #link{
+    display: inline-block;
+    margin-top: 5px;
+}
+.clinic-mangement .clinic-mangement-info ul #link a{
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+}
+.clinic-mangement .clinic-mangement-info ul #link .kil {
+    position: absolute;
+    top: 135px;
+    left:inherit;
+    min-width: 0px;
+   
+}
+.clinic-mangement .clinic-mangement-info ul #link .cricle{
+   border:1px solid #a8a8a3;
+   border-radius:50%;
+   box-shadow: 1px 1px 5px;
+}
+.clinic-mangement .clinic-mangement-info ul #link-left{
+    display: inline-block;
+    float:left;
+    margin-top:20px;
+}
+.clinic-mangement .clinic-mangement-info ul #link-left a{
+    background: #31a5d6;
+    font-weight: bold;
+    font-size: 17px;
+    border-radius: 4px;
+    cursor: pointer;
+    color: #fff;
+    margin-left: 10px;
+    text-decoration: none;
+    height: 40px;
+    padding: 10px;
+}
+.clinic-mangement .clinic-mangement-info .table-clinics{
+    border: 1px solid #a8a8a3;
+    height: 550px;
+    box-shadow: 1px 1px 7px;
+}
+.clinic-mangement .clinic-mangement-info .table-clinics #list{
+    height:40px;
+    text-align: center;
+}
+.clinic-mangement .clinic-mangement-info .table-clinics #list1{
+    height: 70px;
+    text-align: center;
+} 
+.clinic-mangement .clinic-mangement-info .table-clinics ul li{
+    display: inline-block;
+    float: right;
+}
+.clinic-mangement .clinic-mangement-info .table-clinics ul .same{
+    margin-top: 15px;
+    color: #006492;
+    font-size: 18px;
+    font-weight: 700;
+}
+.clinic-mangement .clinic-mangement-info .table-clinics ul li img{
+    width: 60px;
+    height:60px;
+    border: 3px solid #ddd;
+    border-bottom-color: blue;
+    border-radius: 50%;
+    margin-top:10px;
+}
+.clinic-mangement .clinic-mangement-info .table-clinics ul li #name{
+    color:#31a5d6;
+    font-size: 15px;
+    font-weight: 600;
+    margin-right: 10px;
+}
+.clinic-mangement .clinic-mangement-info .table-clinics .line-clinic{
+    border-bottom: 1px solid #dadada;
+    display: block;
+}
+.clinic-mangement .clinic-mangement-info .table-clinics #list1  li  .ed-1{
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #31a5d6;
+}
+.clinic-mangement .clinic-mangement-info .table-clinics #list1 .sum {
+    margin-top: 25px;
+    color: #31a5d6;
+    font-size: 15px;
+    font-weight: 600;
+}
+.clinic-mangement .clinic-mangement-info .table-clinics #list1 .sit {
+    margin-top:5px;
+}
+.clinic-mangement .clinic-mangement-info .table-clinics #list1  li  .change{
+    min-width: 0px;
+    margin: 0px 5px 0px 19px;
+}
+
+
+/* start media phone  */
+
+
+@media (max-width:767px){
+.clinic-mangement .clinic-mangement-info .table-clinics ul li img{
+      width: 50px;
+      height:50px;
+      margin-top:5px;
+    }  
+    .clinic-mangement .clinic-mangement-info .table-clinics ul li{
+        padding-right:0;
+        padding-left: 0;
+    }
+    .clinic-mangement .clinic-mangement-info .table-clinics ul li #name{
+        font-size: 12px;
+    }
+    .clinic-mangement .clinic-mangement-info .table-clinics ul .double{
+        width:57px;
+    }
+.clinic-mangement .clinic-mangement-info .table-clinics #list1 li .change {
+      width: 66px;
+    
+}
+    .clinic-mangement .clinic-mangement-info ul #link-left a {
+        font-size: 14px;
+        margin-left: 3px;
+    }
+}
+
+/* end media phone  */

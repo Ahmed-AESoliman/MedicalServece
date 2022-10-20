@@ -1,0 +1,33 @@
+﻿@model MedicalServece.Models.Testscategory
+
+@{
+    ViewBag.Title = "DeleteTestscategory";
+    Layout = "~/Views/Shared/_Manage.cshtml";
+}
+
+<h2>DeleteTestscategory</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Testscategory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.TC_category)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TC_category)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

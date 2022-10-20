@@ -1,0 +1,54 @@
+﻿@model IEnumerable<MedicalServece.Models.TestsLabContent>
+
+@{
+    ViewBag.Title = "GetAllTestsLabContent";
+    Layout = "~/Views/Shared/_Manage.cshtml";
+}
+
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fas fa-table"></i>
+        Tests Content
+        <a href="../Admin/ProductAdd" class="btn btn-info pull-right fa fa-plus">Add New</a>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Tests Content</th>
+                        <th>Unite</th>
+                        <th>REF Range</th>
+
+                        <th>Action</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelitem => item.TC_Content)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelitem => item.T_unit)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelitem => item.T_refRange)
+                            </td>
+                            <td>
+
+                                @Html.ActionLink("Edit", "EditTC_Content", new { Code = item.TC_Code })|
+                                @Html.ActionLink("Delete", "DeleteTC_Content", new { Code = item.TC_Code })
+                            </td>
+
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

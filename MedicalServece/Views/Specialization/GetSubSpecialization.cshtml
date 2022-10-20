@@ -1,0 +1,48 @@
+﻿@model IEnumerable<MedicalServece.Models.SubSpecialization>
+
+@{
+    ViewBag.Title = "GetSubSpecialization";
+    Layout = "~/Views/Shared/_Manage.cshtml";
+}
+
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fas fa-table"></i>
+        Sub Specialization
+        <a href="../Specialization/CreateSubSpecialization" class="btn btn-info pull-right fa fa-plus">Add New</a>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Major Specialization</th>
+                        <th>Sub Specialization</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.majorSpecialization.Title)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Title)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Delete", "DeleteSubSpecialization", new { id = item.Sub_ID }) |
+                                @Html.ActionLink("Edit", "EditSubSpecialization", new { id = item.Sub_ID }) 
+
+                            </td>
+
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,44 @@
+﻿@model IEnumerable<MedicalServece.Models.NRSpecialization>
+
+@{
+    ViewBag.Title = "GetNRSpecialization";
+    Layout = "~/Views/Shared/_Manage.cshtml";
+}
+
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fas fa-table"></i>
+         Specialization
+        <a href="../Specialization/CreateNRSpecialization" class="btn btn-info pull-right fa fa-plus">Add New</a>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Action</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @item.Title
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "EditNrSpecialization", new { id = item.S_ID }) |
+                                @Html.ActionLink("Delete", "DeleteNrSpecialization", new { id = item.S_ID })
+                            </td>
+
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

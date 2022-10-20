@@ -1,0 +1,25 @@
+﻿@model MedicalServece.Models.Testscategory
+
+@{
+    ViewBag.Title = "TestscategoryDetails";
+    Layout = "~/Views/Shared/_Manage.cshtml";
+}
+<div class="card mb-3">
+    <div class="card-header">
+        @Html.DisplayFor(mode => Model.TC_category)
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+
+            @foreach (var item in Model.testsLabContent)
+            {
+                <span class="btn btn-default border ">
+                    @Html.DisplayFor(modelitem => item.TC_Content)
+                </span>
+            }
+        </div>
+    </div>
+    <p class="card-footer">
+        @Html.ActionLink("Back to List", "GetAllTestscategory")
+    </p>
+</div>

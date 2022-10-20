@@ -1,0 +1,275 @@
+﻿@using Microsoft.AspNet.Identity
+@using MedicalServece.Models
+
+@if (Request.IsAuthenticated)
+            {
+                var db = new ApplicationDbContext();
+                string UserId = User.Identity.GetUserId();
+                var U = db.Users.Where(u => u.Id == UserId).SingleOrDefault();
+                if (User.IsInRole("مستخدم"))
+                {
+        <ul class="sidebar navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/Account/GetProfile">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>@U.FullUserName</span>
+                </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>الملف الطبي</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <a class="dropdown-item" href="../File/UploadMFile">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>اضافه علي هيئه صور</span>
+                    </a>
+                    <a class="dropdown-item" href="../File/TestsResult">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>اضافه نتائج التحليل</span>
+                    </a>
+                    <a class="dropdown-item" href="../File/GetMfileAsImg">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>عرض الصور المضافه</span>
+                    </a>
+                    <a class="dropdown-item" href="../File/TestsResultFile">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>عرض نتائج التحليل</span>
+                    </a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <span class="nav-link" href="#">
+                    @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = " navbar-left" }))
+                    {         @Html.AntiForgeryToken()
+ 
+                      <a class="nav-link" href="javascript:document.getElementById('logoutForm').submit()">الخروج</a>
+}
+                </span>
+            </li>
+        </ul>
+
+    }
+    else if (User.IsInRole("طبيب"))
+    {
+        <ul class="sidebar navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/Account/DRProfile">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>@U.FullUserName</span>
+                </a>
+            </li>
+
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>الملف الطبي</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <a class="dropdown-item" href="../File/UploadMFile">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>اضافه علي هيئه صور</span>
+                    </a>
+                    <a class="dropdown-item" href="../File/TestsResult">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>اضافه نتائج التحليل</span>
+                    </a>
+                    <a class="dropdown-item" href="../File/GetMfileAsImg">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>عرض الصور المضافه</span>
+                    </a>
+                    <a class="dropdown-item" href="../File/TestsResultFile">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>عرض نتائج التحليل</span>
+                    </a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>العياده</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <a class="dropdown-item" href="../Clinic/GetClinic">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>العياده</span>
+                    </a>
+                    <a class="dropdown-item" href="../Clinic/GetAppointments">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>المواعيد</span>
+                    </a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="~/File/GetFileSended">
+                    <i class="fas fa-fw fa-table"></i>
+                    <span>ملفات المرضه</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <span class="nav-link" href="#">
+                    @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = " navbar-left" }))
+                    {                     @Html.AntiForgeryToken()
+
+                        <a class="nav-link" href="javascript:document.getElementById('logoutForm').submit()">الخروج</a>
+                    }
+                </span>
+            </li>
+
+        </ul>
+
+
+    }
+    else if (User.IsInRole("ممرض"))
+    {
+        var Nli = db.NCheckUp.Where(u => u.UserID == U.Id).SingleOrDefault();
+        <ul class="sidebar navbar-nav">
+            <li class="nav-item active">
+                <a class="nav-link" href="/Account/NRProfile">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>@U.FullUserName</span>
+                </a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>الملف الطبي</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <a class="dropdown-item" href="../File/UploadMFile">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>اضافه علي هيئه صور</span>
+                    </a>
+                    <a class="dropdown-item" href="../File/TestsResult">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>اضافه نتائج التحليل</span>
+                    </a>
+                    <a class="dropdown-item" href="../File/GetMfileAsImg">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>عرض الصور المضافه</span>
+                    </a>
+                    <a class="dropdown-item" href="../File/TestsResultFile">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>عرض نتائج التحليل</span>
+                    </a>
+
+                </div>
+            </li>
+            @if (Nli != null)
+            {
+                var month = DateTime.Now.Date - Nli.LicenseDate.Date;
+                if (month.TotalDays >= 90)
+                {
+
+                    <li class="nav-item">
+                        <span class="nav-link">
+                            <a class="nav-link" href="/File/NurseLicense">طلب تصريح العمل</a>
+                        </span>
+                    </li>
+                }
+            }else if(Nli==null)
+            {
+
+            <li class="nav-item">
+                <span class="nav-link">
+                    <a class="nav-link" href="/File/NurseLicense">طلب تصريح العمل</a>
+                </span>
+            </li>
+            }
+            <li class="nav-item">
+                <span class="nav-link">
+                    @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = "" }))
+                    {            @Html.AntiForgeryToken()
+
+                        <a class="nav-link" href="javascript:document.getElementById('logoutForm').submit()">الخروج</a>
+                    }
+                </span>
+            </li>
+        </ul>
+
+    }
+    else if (User.IsInRole("Admin"))
+    {
+        <ul class="sidebar navbar-nav">
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Radiation</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <a class="dropdown-item" href="../Radiation/GetAllRadiationcategoryt">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>Radiation category</span>
+                    </a>
+                    <a class="dropdown-item" href="../Radiation/GetAllRadiationLabContent">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>Radiation Content</span>
+                    </a>
+                    <a class="dropdown-item" href="../Radiation/GetAllRadiationCenter">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>Radiation Center</span>
+                    </a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Tests</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <a class="dropdown-item" href="../Tests/GetAllTestscategory">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>Tests category</span>
+                    </a>
+                    <a class="dropdown-item" href="../Tests/GetAllTestsLabContent">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>Tests Content</span>
+                    </a>
+                    <a class="dropdown-item" href="../Tests/GetAllTestsLabContent">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>Laboratory</span>
+                    </a>
+                </div>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="fas fa-fw fa-folder"></i>
+                    <span>Specialization</span>
+                </a>
+                <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+                    <a class="dropdown-item" href="../Specialization/GetMajorSpecialization">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>Major_Specialization DR</span>
+                    </a>
+                    <a class="dropdown-item" href="../Specialization/GetSubSpecialization">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>Sub_Specialization DR</span>
+                    </a>
+                    <a class="dropdown-item" href="../Specialization/GetNRSpecialization">
+                        <i class="fas fa-fw fa-table"></i>
+                        <span>Neures_Specialization</span>
+                    </a>
+                </div>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/Account/NurseNotAllow">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Nurses Not Allowed</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <span class="nav-link" href="#">
+                    @using (Html.BeginForm("LogOff", "Account", FormMethod.Post, new { id = "logoutForm", @class = " navbar-left" }))
+                    {         @Html.AntiForgeryToken()
+
+                        <a class="nav-link" href="javascript:document.getElementById('logoutForm').submit()">الخروج</a>
+                    }
+                </span>
+            </li>
+
+
+        </ul>
+
+    }
+}

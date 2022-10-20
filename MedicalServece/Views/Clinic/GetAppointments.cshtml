@@ -1,0 +1,56 @@
+﻿@model IEnumerable<MedicalServece.Models.Appointments>
+
+@{
+    ViewBag.Title = "GetAppointments";
+    Layout = "~/Views/Shared/_Manage.cshtml";
+}
+
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fas fa-table"></i>
+        <a href="../Clinic/CreateAppointments" class="btn btn-success pull-right fa fa-plus">اضافه موعد جديد</a>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table " id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>اليوم</th>
+                        <th>من</th>
+                        <th>الي</th>
+                        <th></th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Day)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TimeFrom)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.TimeTo)
+                            </td>
+                            <td>
+                                @Html.ActionLink("تعديل", "EditAppointments", new { id = item.A_id }) |
+                                                           
+                                @using (Html.BeginForm("DelAppointment", "Clinic",new {id=item.A_id }, FormMethod.Post, new { id = "Delform" ,style= "display:inline-block" }))
+                                {
+                                             @Html.AntiForgeryToken()
+
+                                    <a href="javascript:document.getElementById('Delform').submit()">حذف</a>
+                                }
+                            </td>
+                        </tr>
+
+                                }
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

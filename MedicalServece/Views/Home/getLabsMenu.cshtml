@@ -1,0 +1,40 @@
+﻿@model IEnumerable<MedicalServece.Models.Testscategory>
+
+@{
+    ViewBag.Title = "getLabsMenu";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}
+
+<div class="container" style="margin-bottom:20px">
+    <div class="row">
+        <div class="panel panel-group" style="width:100%">
+            @foreach (var cat in Model)
+            {
+                <div class="panel-heading h2 text-primary">
+
+                    <h2>
+                        @cat.TC_category
+                    <hr style="width:15%;margin-right:0;height:3px;border-top: 3px solid #428bca;" />
+                </h2>
+            </div>
+                <div class="panel-body">
+
+                    @foreach (var con in cat.testsLabContent)
+                    {
+
+                        <a style="text-decoration:none" href=@Url.Action("ShowTestLabs", "Home", new { lab = @con.TC_Content })>
+                            <span class="btn btn-default" style="font-size:18px">
+
+                                @con.TC_Content
+                            </span>
+
+                        </a>
+                    }
+                </div>
+
+            }
+        </div>
+
+    </div>
+</div>
+

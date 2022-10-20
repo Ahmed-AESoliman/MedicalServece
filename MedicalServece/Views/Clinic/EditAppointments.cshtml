@@ -1,0 +1,51 @@
+﻿@model MedicalServece.Models.Appointments
+
+@{
+    ViewBag.Title = "EditAppointments";
+    Layout = "~/Views/Shared/_Manage.cshtml";
+}
+  <style>
+  </style>
+<div class="card mb-3">
+    <div class="card-body">
+            <div class="table-responsive">
+                    @using (Html.BeginForm())
+                    {
+                        @Html.AntiForgeryToken()
+                         @Html.HiddenFor(mode=>mode.C_id)
+                        @Html.HiddenFor(mode => mode.A_id)
+
+                        <div class="form-horizontal">
+                            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                            <div class="form-group">
+                                <label class="control-label col-md-2">اليوم</label>
+                                <div class="col-md-10">
+                                    @Html.DropDownList("Day", null, new {@class = "form-control" })
+                                    @Html.ValidationMessageFor(model => model.Day, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-2">من</label>
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.TimeFrom, new { htmlAttributes = new { @class = "form-control", @type = "time" } })
+                                    @Html.ValidationMessageFor(model => model.TimeFrom, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-md-2">الي</label>
+                                <div class="col-md-10">
+                                    @Html.EditorFor(model => model.TimeTo, new { htmlAttributes = new { @class = "form-control", @type = "time" } })
+                                    @Html.ValidationMessageFor(model => model.TimeTo, "", new { @class = "text-danger" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-offset-2 col-md-10">
+                                    <input type="submit" value="Create" class="btn btn-success" />
+                                </div>
+                            </div>
+                        </div>  
+                    }
+            </div>
+
+    </div>
+</div>

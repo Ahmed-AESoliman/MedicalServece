@@ -1,0 +1,61 @@
+﻿@model MedicalServece.Models.EditProFile
+
+@{
+    ViewBag.Title = "GetProfile";
+    Layout = "~/Views/Shared/_Manage.cshtml";
+}
+
+<style>
+    ul {
+        list-style: none;
+        display: inline-block;
+        width: 100%;
+        padding: 0;
+    }
+</style>
+<div class="card mb-3" dir="rtl">
+    <div class="card-body ">
+
+        <div class="container">
+            <div class="row">
+                <div class="about col-lg-4 col-md-4 col-sm-5 col-xs-12">
+                    <ul class="icons">
+                        <li><img id="online2" src="~/images/online.png" class="img-responsive img-thumbnail pull-right"></li>
+                    </ul>
+                </div>
+                <div class="form-edit col-lg-8 col-md-8 col-sm-7 col-xs-12">
+                    <div class="form-group">
+                        <div class="form-control">
+                            <span class="pull-right">الاسم بالكامل  </span><span class="pull-right">: @Model.FullUserName</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-control">
+                            <span class="pull-right">رقم الهاتف  </span><span class="pull-right">: @Model.PhoneNumber</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-control">
+                            <span class="pull-right">تاريخ الميلاد  </span><span class="pull-right">: @Model.Birthdate.ToShortDateString()</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-control">
+                            <span class="pull-right">البريد الالكتروني  </span><span class="pull-right">:  @Model.Email</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+
+                        <div class="form-control">
+                            <span class="pull-right">الجنس  </span><span class="pull-right">:  @Model.Gender</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <p class="card-footer">
+        @Html.ActionLink("تعديل", "EditProfile", null, new { @class = "btn btn-success" })
+    </p>
+</div>

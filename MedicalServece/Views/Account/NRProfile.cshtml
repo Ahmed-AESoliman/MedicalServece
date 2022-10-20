@@ -1,0 +1,204 @@
+﻿@model MedicalServece.Models.ApplicationUser
+
+@{
+    ViewBag.Title = "NRProfile";
+    Layout = "~/Views/Shared/_Manage.cshtml";
+}
+<style>
+    ul {
+        list-style: none;
+        display: inline-block;
+        width: 100%;
+        padding: 0;
+    }
+    
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+input[type="checkbox"]:checked + input[type="hidden"] + .slider,
+input[type="checkbox"]:checked + .slider {
+  background-color: #2196F3;
+}
+
+input[type="checkbox"]:focus + input[type="hidden"] + .slider,
+input[type="checkbox"]:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input[type="checkbox"]:checked + input[type="hidden"] + .slider:before,
+input[type="checkbox"]:checked + .slider:before {
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+</style>
+<div class="card mb-3" dir="rtl">
+    <div class="card-body ">
+
+        <div class="container">
+            <div class="row">
+                <div class="about col-lg-4 col-md-4 col-sm-5 col-xs-12">
+                    <ul class="icons">
+                        <li><img id="online2" src="~/images/online.png" class="img-responsive img-thumbnail pull-right"></li>
+                        <li>
+                            <div class="switch">
+                                
+                                @using (Html.BeginForm("enableNR", "Account", FormMethod.Post,new { id="form"}))
+                                {
+                                    <label class="switch">
+                                        @if (Model.IsActive == true)
+                                        {
+                                             <input type="checkbox" name="IsActive" checked="checked" value="true" class="IsActive" />
+                                             <div class="slider round">
+                                             </div>
+                                        }
+                                        else
+                                        {
+                                            <input type="checkbox" name="IsActive" value="false" class="IsActive" />
+                                            <div class="slider round">
+                                            </div>
+                                        }
+
+                                             @*@Html.CheckBox("IsActive", Model.IsActive)
+                                        <div class="slider round"></div>*@ 
+                                    </label>
+                                }
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="info">
+                        <li class="pull-right"><h3><span>نبذه</span> <samp style="color:#007bff">عن</samp> الدكتور </h3></li>
+                        <li class="pull-right" width="100%">
+                            <div class="pull-right">
+                                @Model.Summray  
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="form-edit col-lg-8 col-md-8 col-sm-7 col-xs-12">
+                    <div class="form-group">
+                        <div class="form-control">
+                            <span class="pull-right">الاسم بالكامل  </span><span class="pull-right">: @Model.FullUserName</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-control">
+                            <span class="pull-right">تاريخ الميلاد  </span><span class="pull-right">: @Model.Birthdate.ToShortDateString()</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-control">
+                            <span class="pull-right">البريد الالكتروني  </span><span class="pull-right">:  @Model.Email</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+
+                        <div class="form-control">
+                            <span class="pull-right">الجنس  </span><span class="pull-right">:  @Model.Gender</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+
+                        <div class="form-control">
+                            <span class="pull-right">الدراسة  </span><span class="pull-right">:  @Model.Degree</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="form-control">
+                            <span class="pull-right">بلد التخرج  </span><span class="pull-right">:  @Model.Country</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+
+                        <div class="form-control">
+                            <span class="pull-right">سنه التخرج  </span><span class="pull-right">:  @Model.ExYear</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+
+                        <div class="form-control">
+                            <span class="pull-right">المستوي المهني   </span><span class="pull-right">:  @Model.ProfessionalTitle</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+
+                        <div class="form-control">
+                            <span class="pull-right">الاسم المهني بالكامل  </span><span class="pull-right">:  @Model.FullProfessionalTitle</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+
+                        <div class="form-control">
+                            <span class="pull-right">التخصص الرئيسي  </span><span class="pull-right">:  @Model.MajorSpecialization</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <p class="card-footer">
+        @Html.ActionLink("تعديل", "EditNerusProfile", null, new { @class = "btn btn-success" })
+    </p>
+</div>
+<!-- JS includes -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+<script src="//ajax.aspnetcdn.com/ajax/jquery.validate/1.11.1/jquery.validate.min.js"></script>
+<script src="//ajax.aspnetcdn.com/ajax/mvc/4.0/jquery.validate.unobtrusive.min.js"></script>
+
+<script type="text/javascript">
+				$(document).ready(function ()
+				{
+				    $(".IsActive").change(function () {
+				        if ($(".IsActive").is(":checked"))
+						{
+							$("#form").submit();
+						}
+					});
+				});
+				//$(document).ready(function () {
+				//    $("#IsNotActive").change(function () {
+				//        if ($("#IsNotActive").is(":checked")) {
+				//            $("#form").submit();
+				//        }
+				//    });
+				//});
+</script>

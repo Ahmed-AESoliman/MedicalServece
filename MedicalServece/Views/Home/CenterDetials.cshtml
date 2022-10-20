@@ -1,0 +1,174 @@
+﻿@model MedicalServece.Models.RadiationLab
+
+@{
+    ViewBag.Title = Model.R_Name;
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+}<script src="~/Scripts/jquery.min.js"></script>
+<script src="~/Scripts/jquery.rateyo.min.js"></script>
+<section class="serch">
+    <div class="jobs col-lg-12 ">
+        <div class="jobs1-top1">
+            <div class="container">
+                <div class="row">
+                    <div class="choose-serch col-lg-7 col-md-12 col-sm-12 col-xs-12">
+                        <div class="top-menu">
+                            <div class="speciality">
+                                <p class="speciality-title">نبذه</p>
+                                <p class="search-results">عن :</p>
+                            </div>
+                        </div>
+                        <div class="bg1-serch1">
+                            <div class="temple-count visible-xs col-xs-8">
+                                <div class="color1">
+                                    <img src="/images/Capture1.PNG">
+                                </div>
+                            </div>
+                            <div class="book col-lg-10 col-md-10 col-sm-10 col-xs-12">
+                                <ul>
+                                    <li class="hidden-xs"><h2>@Model.R_Name</h2></li>
+                                    <li class="hidden-xs"><p></p></li>
+                                    <li class="hide-span visible-xs"><p><span id="hide">@Model.R_Name</span></p></li>
+                                    <li><i id="icon-d1" class="fa fa-star" aria-hidden="true"></i><i id="icon-d1" class="fa fa-star" aria-hidden="true"></i><i id="icon-d1" class="fa fa-star" aria-hidden="true"></i><i id="icon-d1" class="fa fa-star" aria-hidden="true"></i><i id="icon-d1" class="fa fa-star-half-o" aria-hidden="true"></i> <span id="rate-d1">التقييم العام</span></li>
+                                </ul>
+                            </div>
+                            <div class="temple-count col-lg-2 col-md-2 col-sm-2 hidden-xs">
+                                <div class="color1">
+                                    <img src="/images/Capture1.PNG">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bg4-serch4">
+                            <div class="info2-cls2">
+                                <ul>
+                                    <li><span>@Model.R_Address </span></li>
+                                    <li><i class="fa fa-phone" aria-hidden="true"></i><p class="inline">@Model.R_Phone</p></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-comment col-lg-5 col-md-12 col-sm-12 col-xs-12 ">
+                        <div class="dg-serch">
+                            <div class="dg1">
+                                <span class="clc"><i class="fa fa-star-half-o" aria-hidden="true"></i><span class="cls">تقييم المرضى :</span></span>
+                            </div>
+                            <div class="info1-cls1">
+                                <div class="ratings">
+                                    <span id="ratings-s1"></span>
+                                    <div id="height">التقييم العام</div>
+                                </div>
+                                <span class="line-rate"></span>
+                                @*@{ int i = 1;}
+                                @foreach (var rat in Model.Rating)
+
+                                {
+                                    <div class="rate-place">
+                                        <span class="line-rate"></span>
+                                        <div class="rate-profile">
+                                            <ul>
+                                                <li><img src="~/images/icons8-doctor-male-48.png"></li>
+                                                <li class="comment">@rat.user.FullUserName</li>
+                                            </ul>
+                                        </div>
+                                        <div class="rate-star">
+                                            <ul>
+                                                <li>
+                                                    <span class="color-rate">
+
+                                                        <span class="@("star"+i)"></span>
+                                                        <script>
+                                                                $(function () {
+
+                                                                    $('.@("star"+i)').rateYo({
+                                                                        rating: @rat.rate ,
+                                                                        numStars: 5,
+                                                                        maxValue:5,
+                                                                        readOnly:true,
+                                                                        starWidth: "20px",
+                                                                        multiColor: {
+
+                                                                            "startColor": "#FF0000",
+                                                                            "endColor": "#f4c027"
+                                                                        },
+
+                                                                    });
+
+                                                                });
+                                                        </script>
+                                                    </span>
+                                                </li>
+                                                <li><p>"@rat.conment"</p></li>
+                                            </ul>
+                                        </div>
+                                        <span id="dat-e">@rat.datepost</span>
+                                    </div>
+                                    i++;
+                                    <span class="line-rate"></span>
+                                }*@
+                            </div>
+                            @*@if (Request.IsAuthenticated)
+                            {
+                                <div class="info1-cls" style="margin: 20px 0;">
+                                    @using (Html.BeginForm("RatingDR", "Home", FormMethod.Post))
+                                    {
+                                        @Html.AntiForgeryToken()
+                                        @Html.HiddenFor(model => model.user.Id)
+                                        <input type="hidden" name="C_id" value="@Model.C_Id" />
+                                        <div id="str"></div>
+                                        <input type="hidden" name="rate" id="rating" />
+                                        <input name="com" type="text" placeholder="رئيك في الطبيب" style="width: 100%;height: 73px;border: .5px solid #B3B3E3;margin: 10px 0;padding: 15px;" />
+                                        <input type="submit" class="btn btn-primary btn-block" value="نشر" />
+                                    }
+                                </div>
+                            }*@
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+        $(function () {
+
+            $("#str").rateYo({
+                rating: 0,
+                maxValue:5,
+                numStars: 5,
+                starWidth: "20px",
+                multiColor: {
+
+                    "startColor": "#FF0000",
+                    "endColor": "#f4c027"
+                },
+                onChange: function (rating, rateYoInstance) {
+
+                    $("#rating").val(rating)
+                },
+
+
+            });
+
+        });
+</script>
+<script>
+        $(function () {
+
+            $("#ratings-s1").rateYo({
+                rating:4.5,
+                numStars: 5,
+                readOnly:true,
+                maxValue:5,
+                starWidth: "20px",
+                multiColor: {
+
+                    "startColor": "#FF0000",
+                    "endColor": "#f4c027"
+                },
+
+            });
+
+        });
+</script>
+

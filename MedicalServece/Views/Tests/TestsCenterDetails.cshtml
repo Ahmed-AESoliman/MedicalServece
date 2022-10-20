@@ -1,0 +1,48 @@
+﻿@model MedicalServece.Models.TestsLab
+
+@{
+    ViewBag.Title = "TestsCenterDetails";
+    Layout = "~/Views/Shared/_Manage.cshtml";
+}
+
+<h2>TestsCenterDetails</h2>
+
+<div>
+    <h4>TestsLab</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.T_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.T_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.T_Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.T_Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.T_Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.T_Address)
+        </dd>
+        @foreach (var item in Model.testsLabContents)
+        {
+            <span>
+                @item.TC_Content
+            </span>
+        }
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.T_Code }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

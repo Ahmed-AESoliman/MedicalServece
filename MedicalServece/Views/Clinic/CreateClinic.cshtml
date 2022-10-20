@@ -1,0 +1,82 @@
+﻿@model MedicalServece.Models.Clinic
+
+@{
+    ViewBag.Title = "CreateClinic";
+    Layout = "~/Views/Shared/_MainLayout.cshtml";
+     
+}
+
+@using (Html.BeginForm()) 
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+    <div class="clinic">
+        <div class="clinic-address">
+            <ul>
+                <li><img src="~/images/icons8-home-address-48.png" width="30px"></li>
+                <li id="address"><span>العن</span>وان</li>
+            </ul>
+        </div>
+        <div class="clinic-address1">
+            <ul>
+
+                <li>
+                    @Html.EditorFor(model => model.City, new { htmlAttributes = new { id = "addr1", placeholder = "المحافظه" } })
+                    @Html.ValidationMessageFor(model => model.City, "", new { @class = "text-danger" })
+                </li>
+                <li>
+                    @Html.EditorFor(model => model.ClinicArea, new { htmlAttributes = new { id = "addr1", placeholder = "المنطقه"} })
+                    @Html.ValidationMessageFor(model => model.ClinicArea, "", new { @class = "text-danger" })
+                </li>
+                <li>
+                    @Html.EditorFor(model => model.ClinicStreat, new { htmlAttributes = new { id = "addr1", placeholder = "رقم/اسم الشارع" } })
+                    @Html.ValidationMessageFor(model => model.ClinicStreat, "", new { @class = "text-danger" })
+
+                </li>
+                <li>
+                    @Html.EditorFor(model => model.BuldingNumber, new { htmlAttributes = new { id = "addr1", placeholder = "رقم المبنى" } })
+                    @Html.ValidationMessageFor(model => model.BuldingNumber, "", new { @class = "text-danger" })
+
+                </li>
+                <li>
+                    @Html.EditorFor(model => model.Floor, new { htmlAttributes = new { id = "addr2", placeholder = "الدور" } })
+                    @Html.ValidationMessageFor(model => model.Floor, "", new { @class = "text-danger" })
+                </li>
+                <li>
+                    @Html.EditorFor(model => model.SpecialMarque, new { htmlAttributes = new { id = "addr3", placeholder = "علامه مميزه" } })
+                    @Html.ValidationMessageFor(model => model.SpecialMarque, "", new { @class = "text-danger" })
+                </li>
+            </ul>
+        </div>
+        <div class="clinic-info">
+            <ul>
+                <li><img src="~/images/icons8-download-from-the-cloud-50.png" width="30px"></li>
+                <li id="address"><span>البيان</span>ات</li>
+            </ul>
+        </div>
+        <div class="clinic-info1">
+            <ul>
+                <li>
+                    @Html.EditorFor(model => model.ClinicName, new { htmlAttributes = new { id = "addr3", placeholder = "اسم العياده" } })
+                    @Html.ValidationMessageFor(model => model.ClinicName, "", new { @class = "text-danger" })
+                </li>
+                <li>
+                    @Html.EditorFor(model => model.ClininPhone, new { htmlAttributes = new { id = "addr3", placeholder = "رقم الهاتف" } })
+                    @Html.ValidationMessageFor(model => model.ClininPhone, "", new { @class = "text-danger" })
+                </li>
+                <li>
+                    @Html.EditorFor(model => model.BookingPrice, new { htmlAttributes = new { id = "addr4", placeholder = "سعر الحجز" } })
+                    @Html.ValidationMessageFor(model => model.BookingPrice, "", new { @class = "text-danger" })
+                </li>
+            </ul>
+        </div>
+    </div>
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="اضافة" class="btn btn-primary" />
+            </div>
+        </div>
+}

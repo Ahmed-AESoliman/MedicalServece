@@ -1,0 +1,378 @@
+﻿@model IEnumerable<MedicalServece.Models.Clinic>
+
+    @{
+    Layout = null;
+    }
+    <!DOCTYPE html>
+    <html lang="en" dir="rtl">
+
+    <head>
+        <meta charset="UTF-8">
+        <!-- First mobile Meta -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- IE comatibility Meta -->
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>serch-doctors</title>
+        <link rel="stylesheet" href="~/Content/font-awesome.min.css">
+        <link rel="stylesheet" href="~/Content/bootstrap.css">
+        <link rel="stylesheet" href="~/Content/animate.css">
+        <link rel="stylesheet" href="~/Content/normalize.css">
+        <link rel="stylesheet" href="~/Content/style.css">
+        <link rel="stylesheet" href="~/Content/media.css">
+        <link href="~/Content/jquery.rateyo.min.css" rel="stylesheet" />
+        <link rel="stylesheet" href="~/Content/lightslider.css">
+
+    </head>
+
+    <body>
+        <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarlink1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#"><img class="logo-img" src="~/images/logo.png"></a>
+                    <a class="line1 navbar-left visible-xs" href="javascript:void(0);"><input type="text" class="form-control4" placeholder="ابحث بالتخصص والاسم والمنطقة ... "></a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="navbarlink1">
+                    @Html.Partial("_LoginPartial")
+
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a class="line" href="#">الصفحة الرئيسية</a></li>
+                        <li>
+                            <a class="line line-span" href="#">صفحة البحث</a>
+                        </li>
+                        <li><a class="line" href="#"></a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle line" data-toggle="dropdown">اسم المستخدم<span class="caret"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a class="line tab" href="#">صفحتي</a></li>
+                                <li><a class="line tab" href="#">ملفي الشخصي</a></li>
+                                <li><a class="line tab" href="#">اعدادات الحساب</a></li>
+                                <li><a class="line tab" href="#">الخروج</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+        <section class="header-property">
+            <div class="center-nav">
+                <h2>ابحث عن افضل الاطباء</h2>
+                <div class="property hidden-xs">
+
+                </div>
+            </div>
+        </section>
+        <section class="serch">
+            <div class="jobs col-lg-12 ">
+                <div class="jobs-top">
+                    <div class="container">
+                        <div class="row">
+
+                            <div class="change col-lg-12">
+                                @using (Html.BeginForm("searchDR", "Home", FormMethod.Post, new { @class = "hidden-xs" }))
+                                {
+                                    <div class="choose-property col-lg-9 col-md-8 col-sm-8 col-xs-12 hidden-xs">
+                                        <ul>
+                                            <li>
+                                                @Html.DropDownList("Specialization",null, "التخصص", new { id = "select1" })
+                                            </li>
+                                            
+                                            <li>
+                                                @Html.DropDownList("Area", new List<SelectListItem> {
+                                            new SelectListItem {Text="المعادي" ,Value="المعادي"},
+                                            new SelectListItem {Text="الجيزه" ,Value="الجيزه"} ,
+                                            },"المنطقه", new { id = "select2" })
+                                            </li>
+                                            <li>
+                                                <input type="text" id="select3" name="DName" placeholder="ابحث باسم الدكتور...">
+                                            </li>
+
+                                            <li><input type="submit" class="serch-btn" value="بحث" /></li>
+                                        </ul>
+                                    </div>
+                                    <div class="serch-property col-lg-3 col-md-4 col-sm-4 hidden-xs">
+                                        <ul class="menuee">
+                                            <div class="address"><i class="fa fa-check-square-o icon" aria-hidden="true"></i><span>حدد بحثك</span></div>
+                                            <li>
+                                                @Html.DropDownList("Title", new List<SelectListItem> {
+                                            new SelectListItem {Text="اللقب" ,Value=" "},
+                                            new SelectListItem {Text="استشاري" ,Value="استشاري"} ,
+                                            new SelectListItem {Text="استاذ" ,Value="استاذ"} ,
+                                            new SelectListItem {Text="اخصائي" ,Value="اخصائي"}
+                                            }, new { id = "ch-click" })
+                                            </li>
+                                            <li>
+                                                @Html.DropDownList("Gender", new List<SelectListItem> {
+                                            new SelectListItem {Text="الجنس" ,Value="كل"},
+                                            new SelectListItem {Text="دكتور" ,Value="ذكر"} ,
+                                            new SelectListItem {Text="دكتوره" ,Value="انثي"} ,
+                                            }, new { id = "ch-click" })
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                }
+                                @using (Html.BeginForm("searchDR", "Home", FormMethod.Post,new {@class= "visible-xs" }))
+                                {
+                                    <div class="full-nav1 visible-xs">
+                                        <nav class="nav1">
+                                            <div class="save-recover">
+                                                <div class="top">
+                                                    <h3> ابحث</h3>
+                                                </div>
+                                                @Html.DropDownList("Specialization", null, new { id = "text2" })
+                                                @Html.DropDownList("Area", new List<SelectListItem> {
+                                            new SelectListItem {Text="المعادي" ,Value="المعادي"},
+                                            new SelectListItem {Text="الجيزه" ,Value="الجيزه"} ,
+                                            }, new { id = "text2" })
+                                                <input type="text" id="text2" name="DName" placeholder="ابحث باسم الدكتور...">
+                                                <br>
+                                                <input type="submit" class="save" value="ابحث">
+                                                <a class="nav1-close" href="javascript:void(0);"><input type="button" class="save" value="الغاء"></a>
+
+                                            </div>
+                                        </nav>
+                                    </div>
+                                    <div class="full-nav2 visible-xs">
+                                        <nav class="nav2">
+                                            <div class="serch-property-phone">
+                                                <ul class="menuee-phone">
+                                                    <div class="address-phone"><i class="fa fa-check-square-o icon" aria-hidden="true"></i><span>حدد بحثك</span></div>
+                                                    <li>
+                                                        @Html.DropDownList("Title", new List<SelectListItem> {
+                                            new SelectListItem {Text="اللقب" ,Value=" "},
+                                            new SelectListItem {Text="استشاري" ,Value="استشاري"} ,
+                                            new SelectListItem {Text="استاذ" ,Value="استاذ"} ,
+                                            new SelectListItem {Text="اخصائي" ,Value="اخصائي"}
+                                            }, new { id = "ch-click" })
+                                                    </li>
+                                                    <li>
+                                                        @Html.DropDownList("Gender", new List<SelectListItem> {
+                                            new SelectListItem {Text="الجنس" ,Value="كل"},
+                                            new SelectListItem {Text="دكتور" ,Value="ذكر"} ,
+                                            new SelectListItem {Text="دكتوره" ,Value="انثي"} ,
+                                            }, new { id = "ch-click" })
+                                                    </li>
+                                                </ul>
+                                                <input type="submit" class="save" value="ابحث">
+                                                <a class="nav2-close" href="javascript:void(0);"><input type="button" class="save" value="الغاء"></a>
+                                            </div>
+                                        </nav>
+                                    </div>
+
+                                }
+                            </div>
+
+                            <div class="choose-serch col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                                <div class="top-menu1 visible-xs">
+                                    <ul class="sort">
+                                        <li>
+                                        </li>
+                                        <li>
+                                            <div class="btn-group1">
+                                                <span>
+                                                    <a class="click" href="javascript:void(0);">
+                                                        <button type="button" id="group-sd2">
+                                                            تصفية
+                                                            <i class="fa fa-filter" aria-hidden="true"></i>
+                                                        </button>
+                                                    </a>
+                                                </span>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+@{int cunt = 1;}
+                                @foreach (var item in Model)
+                                {
+                                    <a href=@Url.Action("DrDetiles","Home",new {id=item.user.Id})>
+                                    <div class="bg-serch">
+                                        <div class="suggests col-lg-4 col-md-4 hidden-sm hidden-xs">
+                                            <div id="imgg1">
+                                                <div class="suggests-name">موا<span>عيد</span></div>
+                                                <div class="suggests-info">الاط<span>باء</span></div>
+                                                <div class="banner">
+                                                    <ul class="lightSlider1">
+                                                        @foreach (var ap in item.Appointments)
+                                                        {
+                                                            <li>
+                                                                <div class="sub-name">@ap.Day</div>
+                                                                <div>من</div>
+                                                                <div>@ap.TimeFrom</div>
+                                                                <div>الي</div>
+                                                                <div>@ap.TimeTo</div>
+                                                            </li>
+                                                        }
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="book col-lg-6 col-md-6 col-sm-10 col-xs-10">
+                                            <ul>
+                                                <li>
+                                                    <h2>@item.user.FullUserName</h2>
+                                                </li>
+                                                <li>
+                                                    <h3>@item.user.ProfessionalTitle @item.user.MajorSpecialization</h3>
+                                                </li>
+                                                <li>
+                                                    <span class="@("star"+cunt)"></span>
+                                                </li>
+                                                <li>
+                                                    <i id="ico-2" class="fa fa-stethoscope" aria-hidden="true"></i>
+                                                    <p class="inline">@item.user.FullProfessionalTitle</p>
+                                                </li>
+                                                <li>
+                                                    <i id="ico-2" class="fa fa-map-marker" aria-hidden="true"></i>
+                                                    <p class="inline">@item.ClinicArea : @item.ClinicStreat </p>
+                                                </li>
+                                                <li>
+                                                    <i id="ico-2" class="fa fa-money" aria-hidden="true"></i>
+                                                    <p class="inline">@item.BookingPrice</p>
+                                                </li>
+                                                <li>
+                                                    <i id="ico-2" class="fa fa-phone" aria-hidden="true"></i>
+                                                    <p class="inline">@item.ClininPhone</p>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="temple-count col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                            <div class="color1">
+                                                <img src="/images/Capture1.PNG">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                </a>
+                                    cunt++;
+                                }                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer class="footer-info col-lg-12">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-d col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                        <div class="ftco-footer-widget ">
+                            <h2 class="ftco-h2">Medical Servicer</h2>
+                            <p> يتضمن الصحة الفعاله للمريض من خلال تسهيل عمليه البحث والاطلاع والحفظ</p>
+                            <ul class="ftco-footer-social list-unstyled mt-5">
+                                <li class="ftco-animate"><a href="#"><span class="icon"><i class="fa fa-twitter" aria-hidden="true"></i></span></a></li>
+                                <li class="ftco-animate"><a href="#"><span class="icon"><i class="fa fa-facebook" aria-hidden="true"></i></span></a></li>
+                                <li class="ftco-animate"><a href="#"><span class="icon"><i class="fa fa-instagram" aria-hidden="true"></i></span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer-d col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                        <div class="ftco-footer-widget ">
+                            <h2 class="ftco-h2">لمزودي الخدمات الطبية</h2>
+                            <ul class="list-unstyled">
+                                <li><a href="#"><span class="glyphicon glyphicon-share-alt mr-2"></span>المريض</a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-share-alt mr-2"></span> للاطباء </a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-share-alt mr-2"></span>الممرضين</a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-share-alt mr-2"></span>مراكز التحاليل والاشعة</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="footer-d col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                        <div class="ftco-footer-widget ">
+                            <h2 class="ftco-h2">ابحث بواسطة</h2>
+                            <ul class="list-unstyled">
+                                <li><a href="#"><span class="glyphicon glyphicon-share-alt mr-2"></span>التخصص</a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-share-alt mr-2"></span>الاسم</a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-share-alt mr-2"></span>المكان</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class=" footer-end col-xs-12 text-center">
+
+                        <p>
+                            Copyright &copy; All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a class="mr-3" href="#" target="_blank">team modern</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="~/Scripts/jquery-1.11.1.min.js"></script>
+        <script src="~/Scripts/lightslider.js"></script>
+        <script>
+            $('.lightSlider1').lightSlider();
+
+        </script>
+        <script>
+            $('#lightSlider2').lightSlider();
+
+        </script>
+        <script>
+            $('#lightSlider3').lightSlider();
+
+        </script>
+        <script>
+            $('#lightSlider4').lightSlider();
+
+        </script>
+        <script>
+            $('#lightSlider5').lightSlider();
+
+        </script>
+        <script>
+            $('#lightSlider6').lightSlider();
+
+        </script>
+        <script>
+            $('#lightSlider7').lightSlider();
+
+        </script>
+        <script>
+            $('#lightSlider8').lightSlider();
+
+        </script>
+        <script src="~/Scripts/bootstrap.min.js"></script>
+        <script src="~/Scripts/ap.js"></script>
+        <script src="~/Scripts/sd.js"></script>
+        <script src="~/Scripts/jquery.min.js"></script>
+        <script src="~/Scripts/jquery.rateyo.min.js"></script>
+        @{ int i = 1;}
+        @foreach (var rate in Model)
+        {
+            <script>
+            $(function(){
+                $('.@("star"+i)').rateYo({
+                    rating: @rate.user.OverAllRating ,
+                    numStars: 5,
+                    maxValue:5,
+                    readOnly:true,
+                    starWidth: "15px",
+                    multiColor: {
+                        "startColor": "#FF0000",
+                        "endColor": "#f4c027"
+                    },
+                });
+            });
+            </script>
+            i++;
+        }
+
+
+    </body>
+
+    </html>

@@ -1,0 +1,106 @@
+﻿@model IEnumerable<MedicalServece.Models.ResultFile>
+
+@{
+    ViewBag.Title = "DetileasResultFile";
+    Layout = "~/Views/Shared/_Manage.cshtml";
+    var db = new MedicalServece.Models.ApplicationDbContext();
+    List<MedicalServece.Models.Testscategory> tests = db.Testscategory.ToList();
+    var u = Model.Select(s => s.MFile.UserID).FirstOrDefault();
+}
+
+
+@foreach (var ch in tests)
+{
+
+    <div class="btn-group">
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            @ch.TC_category<span class="caret"></span>
+        </button>
+
+        <ul class="dropdown-menu filters">
+            @foreach (var li in ch.testsLabContent)
+
+            {
+                <li style="padding-left:3px"> <input type="checkbox" value="@li.TC_Content" name="check" class="item table-hover" id="@li.TC_Content" /><label for="@li.TC_Content">@li.TC_Content</label></li>
+            }
+        </ul>
+    </div>
+}
+<br />
+<br />
+<div class="card mb-3">
+    <div class="card-header">
+        @Html.ActionLink("عرض الصور", "DetailesFileSended", new { url =u}, new { @class = "btn btn-success" })
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table " id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>اسم التحليل</th>
+                        <th>النتيجه</th>
+                        <th>الوحده(القياس)</th>
+                        <th>القيم الطبيعيه</th>
+                        <th>التاريخ</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr class="ResultList" data-tag="@item.testsLabContent.TC_Content">
+                            <td>
+                                @Html.DisplayFor(modelItem => item.testsLabContent.TC_Content)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Result)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.testsLabContent.T_unit)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.testsLabContent.T_refRange)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.InserDate.Day)/@Html.DisplayFor(modelItem => item.InserDate.Month)/@Html.DisplayFor(modelItem => item.InserDate.Year)
+                            </td>
+                        </tr>
+
+                    }
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+    
+</div>
+
+
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+        $(document).ready(function () {
+
+            $('.item').on('change', function () {
+                var itemList = [];
+                $('.filters :input:checked').each(function () {
+                    var item = $(this).val();
+                    itemList.push(item);
+                });
+
+                if (itemList.length==0) {
+                    $('.ResultList').fadeIn();
+                }
+                else {
+                    $('.ResultList').each(function () {
+                        var tag = $(this).attr('data-tag');
+                        if (jQuery.inArray(tag, itemList) > -1)
+                            $(this).fadeIn('slow');
+                        else
+                            $(this).hide();
+                    });
+                }
+            });
+        });
+
+</script>

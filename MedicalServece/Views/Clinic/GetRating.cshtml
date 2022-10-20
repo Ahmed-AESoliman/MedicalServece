@@ -1,0 +1,83 @@
+﻿@model IEnumerable<MedicalServece.Models.RatingNR>
+
+@{
+    ViewBag.Title = "GetRating";
+    Layout = "~/Views/Shared/_Manage.cshtml";
+}
+<style>
+    ul {
+        list-style: none;
+    }
+</style>
+<script src="~/Scripts/jquery.min.js"></script>
+
+<div class="card mb-3">
+    <p class="card-header">
+        <span id="ratings-s1"></span>
+        <div id="height">التقييم العام</div>
+    </p>
+    <div class="card-body">
+            <div class="container">
+                <div class="row">
+                    @{ int i = 1;}
+                    @foreach (var rat in Model)
+                    {
+                        <div class="col-md-3 text-right"dir="rtl">
+                                <p class="@("star"+i)">
+                                </p>
+                            <div class="comment">
+                                <span>@rat.conment</span>
+                                <span>@rat.datepost</span>
+                            </div>
+                        </div>
+                    }
+
+                </div>
+        </div>
+
+    </div>
+</div>
+@foreach (var rat in Model)
+{
+
+    <script>
+        $(function () {
+
+        $('.@("star"+i)').rateYo({
+            rating: @rat.rate ,
+            numStars: 5,
+            maxValue:5,
+            readOnly:true,
+            starWidth: "20px",
+            multiColor: {
+
+                "startColor": "#FF0000",
+                "endColor": "#f4c027"
+            },
+
+        });
+
+        });
+    </script>
+    i++;
+}
+
+@*<script>
+        $(function () {
+
+            $("#ratings-s1").rateYo({
+                rating:@Model.OverAllRating,
+                numStars: 5,
+                readOnly:true,
+                maxValue:5,
+                starWidth: "20px",
+                multiColor: {
+
+                    "startColor": "#FF0000",
+                    "endColor": "#f4c027"
+                },
+
+            });
+
+        });
+</script>*@

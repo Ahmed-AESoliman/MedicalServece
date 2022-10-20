@@ -1,0 +1,233 @@
+﻿@model IEnumerable<MedicalServece.Models.RadiationLab>
+
+@{
+    ViewBag.Title = "Radiation ";
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- First mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- IE comatibility Meta -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>serch-doctors</title>
+    <link rel="stylesheet" href="~/Content/font-awesome.min.css">
+    <link rel="stylesheet" href="~/Content/bootstrap.css">
+    <link rel="stylesheet" href="~/Content/animate.css">
+    <link rel="stylesheet" href="~/Content/normalize.css">
+    <link rel="stylesheet" href="~/Content/style.css">
+    <link rel="stylesheet" href="~/Content/media.css">
+    <link href="~/Content/jquery.rateyo.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="~/Content/lightslider.css">
+
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarlink1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img class="logo-img" src="~/images/logo.png"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbarlink1">
+                @Html.Partial("_LoginPartial")
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a class="line" href="#">الصفحة الرئيسية</a></li>
+                    <li>
+                        <a class="line line-span" href="#">صفحة البحث</a>
+                    </li>
+                    <li><a class="line" href="#"></a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle line" data-toggle="dropdown">اسم المستخدم<span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a class="line tab" href="#">صفحتي</a></li>
+                            <li><a class="line tab" href="#">ملفي الشخصي</a></li>
+                            <li><a class="line tab" href="#">اعدادات الحساب</a></li>
+                            <li><a class="line tab" href="#">الخروج</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+    <section class="header-property">
+        <div class="center-nav">
+            <div class="property hidden-xs">
+
+            </div>
+        </div>
+    </section>
+    <section class="serch">
+        <div class="jobs col-lg-12 ">
+            <div class="jobs-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="choose-serch col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+                            @{int cunt = 1;}
+             
+                                @foreach (var lab in Model)
+                                {
+                                    <a href=@Url.Action("CenterDetials","Home",new {id=@lab.R_Code})>
+                                        <div class="bg-serch">
+                                            <div class="book col-lg-9 col-md-9 col-sm-10 col-xs-10">
+                                                <ul>
+                                                    <li>
+                                                        <h2>@lab.R_Name</h2>
+                                                    </li>
+                                                    <li>
+                                                        <span class="@("star"+cunt)"></span>
+                                                    </li>
+                                                    <li>
+                                                        <i id="ico-2" class="fa fa-map-marker" aria-hidden="true"></i>
+                                                        <p class="inline">@lab.R_Address</p>
+                                                    </li>
+                                                    <li>
+                                                        <i id="ico-2" class="fa fa-phone" aria-hidden="true"></i>
+                                                        <p class="inline">@lab.R_Phone</p>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                            <div class="temple-count col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                                <div class="color1">
+                                                    <img src="~/images/Capture1.PNG">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </a>
+
+                                
+                                cunt++;
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="footer-info col-lg-12">
+        <div class="container">
+            <div class="row">
+                <div class="footer-d col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="ftco-footer-widget ">
+                        <h2 class="ftco-h2">Medical Servicer</h2>
+                        <p> يتضمن الصحة الفعاله للمريض من خلال تسهيل عمليه البحث والاطلاع والحفظ</p>
+                        <ul class="ftco-footer-social list-unstyled mt-5">
+                            <li class="ftco-animate"><a href="#"><span class="icon"><i class="fa fa-twitter" aria-hidden="true"></i></span></a></li>
+                            <li class="ftco-animate"><a href="#"><span class="icon"><i class="fa fa-facebook" aria-hidden="true"></i></span></a></li>
+                            <li class="ftco-animate"><a href="#"><span class="icon"><i class="fa fa-instagram" aria-hidden="true"></i></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-d col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                    <div class="ftco-footer-widget ">
+                        <h2 class="ftco-h2">لمزودي الخدمات الطبية</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="#"><span class="glyphicon glyphicon-share-alt mr-2"></span>المريض</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-share-alt mr-2"></span> للاطباء </a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-share-alt mr-2"></span>الممرضين</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-share-alt mr-2"></span>مراكز التحاليل والاشعة</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-d col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                    <div class="ftco-footer-widget ">
+                        <h2 class="ftco-h2">ابحث بواسطة</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="#"><span class="glyphicon glyphicon-share-alt mr-2"></span>التخصص</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-share-alt mr-2"></span>الاسم</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-share-alt mr-2"></span>المكان</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="footer-end col-xs-12 text-center">
+
+                    <p>
+                        Copyright &copy; All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a class="mr-3" href="#" target="_blank">team modern</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/Scripts/jquery-1.11.1.min.js"></script>
+    <script src="~/Scripts/lightslider.js"></script>
+    <script>
+            $('#lightSlider1').lightSlider();
+
+    </script>
+    <script>
+            $('#lightSlider2').lightSlider();
+
+    </script>
+    <script>
+            $('#lightSlider3').lightSlider();
+
+    </script>
+    <script>
+            $('#lightSlider4').lightSlider();
+
+    </script>
+    <script>
+            $('#lightSlider5').lightSlider();
+
+    </script>
+    <script>
+            $('#lightSlider6').lightSlider();
+
+    </script>
+    <script>
+            $('#lightSlider7').lightSlider();
+
+    </script>
+    <script>
+            $('#lightSlider8').lightSlider();
+
+    </script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="~/Scripts/ap.js"></script>
+    <script src="~/Scripts/sd.js"></script>
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/jquery.rateyo.min.js"></script>
+    @{ int i = 1;}
+    @foreach (var rate in Model)
+    {
+        <script>
+            $(function(){
+                $('.@("star"+i)').rateYo({
+                    rating: 5 ,
+                    numStars: 5,
+                    maxValue:5,
+                    readOnly:true,
+                    starWidth: "15px",
+                    multiColor: {
+                        "startColor": "#FF0000",
+                        "endColor": "#f4c027"
+                    },
+                });
+            });
+        </script>
+        i++;
+    }
+
+
+</body>
+
+</html>

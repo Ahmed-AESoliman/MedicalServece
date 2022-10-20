@@ -1,0 +1,84 @@
+﻿@model IEnumerable<MedicalServece.Models.FileContent>
+
+@{
+    ViewBag.Title = "GetMfileAsImg";
+    Layout = "~/Views/Shared/_Manage.cshtml";
+}
+<style>
+    .ResultList{
+            margin-bottom: 10px;
+            padding: 10px;
+    }
+</style>
+
+<div class="card mb-3">
+    <div class="card-header">
+        <div id="filters">
+            <div class="container">
+                <div class="row">
+                    <span class="col-lg-4">
+                        <input type="checkbox" name="check" value="اشاعه" class="item" />
+                        <label for="اشاعه">الاشاعات</label>
+                    </span>
+                    <span class="col-lg-4">
+                        <input type="checkbox" name="check" value="(تقارير الطبيب(روجته" class="item" />
+                        <label for="(تقارير الطبيب(روجته">(تقارير الطبيب(روجته</label>
+                    </span>
+                    <span class="col-lg-4">
+                        <input type="checkbox" name="check" value="تحليل" class="item" />
+                        <label for="تحليل">التحليل</label>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <div class="container">
+                <div class="row">
+                    @foreach (var item in Model)
+                    {
+                        <div class="thumbnail ResultList col-lg-4" data-tag="@item.Cat_file">
+                            <div>
+                                <img src="~/FileUpload/@item.filePath" alt="@item.filePath" class="img-thumbnail img-responsive" />
+                            </div>
+                            <div class="btn-group">
+                                @Html.ActionLink("حذف", "DelImgMfile", new { id = item.FC_id }, new { @class= "btn btn-danger" })
+                            </div>
+                        </div>
+                    }
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script>
+        $(document).ready(function () {
+
+            $('.item').on('change', function () {
+                var itemList = [];
+                $('#filters :input:checked').each(function () {
+                    var item = $(this).val();
+                    itemList.push(item);
+                });
+
+                if (itemList.length==0) {
+                    $('.ResultList').fadeIn();
+                }
+                else {
+                    $('.ResultList').each(function () {
+                        var tag = $(this).attr('data-tag');
+                        if (jQuery.inArray(tag, itemList) > -1)
+                            $(this).fadeIn('slow');
+                        else
+                            $(this).hide();
+                    });
+                }
+            });
+        });
+
+</script>

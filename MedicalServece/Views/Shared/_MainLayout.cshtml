@@ -1,0 +1,134 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <!-- First mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- IE comatibility Meta -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="/Content/font-awesome.min.css">
+    <link rel="stylesheet" href="/Content/bootstrap.css">
+    <link rel="stylesheet" href="/Content/animate.css">
+    <link rel="stylesheet" href="/Content/style.css">
+    <link rel="stylesheet" href="/Content/file.css">
+    <link rel="stylesheet" href="/Content/media.css">
+    <link rel="stylesheet" href="~/Content/fullpage.css">
+    <link rel="stylesheet" href="~/Content/owl-carousel.min.css">
+    <link rel="stylesheet" href="~/Content/sap.css">
+    <link href="~/Content/jquery.rateyo.min.css" rel="stylesheet" />
+    <link href="~/Content/time-days.css" rel="stylesheet" />
+
+    <script src="~/scripts/html5shiv.min.js"></script>
+    <script src="~/scripts/respond.min.js"></script>
+
+
+</head>
+<body>
+    <nav class="navbar navbar-default"style="margin-bottom:0" role="navigation">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarlink1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#"><img class="logo-img" src="~/images/logo.png"></a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbarlink1">
+
+                @Html.Partial("_LoginPartial")
+            <ul class="nav navbar-nav navbar-right">
+
+                <li><a class="line line-span" href="/Home/Index">الرئيسية</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle line" data-toggle="dropdown">ابحث عن..<span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a class="line line-span" href="/Home/searchDR">بحث عن طبيب</a></li>
+                        <li><a class="line line-span" href="/Home/SearchNR">بحث عن ممرض</a></li>
+                        <li><a class="line line-span" href="/Home/getLabsMenu">بحث عن معمل تحليل</a></li>
+                        <li><a class="line line-span" href="/Home/getRadiationMenu">بحث عن مركز اشاعة</a></li>
+                    </ul>
+                </li>
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
+
+
+           @RenderBody()
+
+    <footer class="footer-info col-lg-12" style="background-image: url(images/footer-bg.jpg);">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="footer-d col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                    <div class="ftco-footer-widget ">
+                        <h2 class="ftco-h2">Medical Servicer</h2>
+                        <p> يتضمن الصحة الفعاله للمريض من خلال تسهيل عمليه البحث والاطلاع والحفظ</p>
+                        <ul class="ftco-footer-social list-unstyled mt-5">
+                            <li class="ftco-animate"><a href="#"><span class="icon"><i class="fa fa-twitter" aria-hidden="true"></i></span></a></li>
+                            <li class="ftco-animate"><a href="#"><span class="icon"><i class="fa fa-facebook" aria-hidden="true"></i></span></a></li>
+                            <li class="ftco-animate"><a href="#"><span class="icon"><i class="fa fa-instagram" aria-hidden="true"></i></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-d col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                    <div class="ftco-footer-widget ">
+                        <h2 class="ftco-h2">لمزودي الخدمات الطبية</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="#"><span class="glyphicon glyphicon-share-alt mr-2"></span>المريض</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-share-alt mr-2"></span> للاطباء </a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-share-alt mr-2"></span>الممرضين</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-share-alt mr-2"></span>مراكز التحاليل والاشعة</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-d col-lg-4 col-md-4 col-sm-4 col-xs-6">
+                    <div class="ftco-footer-widget ">
+                        <h2 class="ftco-h2">ابحث بواسطة</h2>
+                        <ul class="list-unstyled">
+                            <li><a href="#"><span class="glyphicon glyphicon-share-alt mr-2"></span>التخصص</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-share-alt mr-2"></span>الاسم</a></li>
+                            <li><a href="#"><span class="glyphicon glyphicon-share-alt mr-2"></span>المكان</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class=" footer-end col-xs-12 text-center">
+
+                    <p>
+                        Copyright &copy; All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a class="mr-3" href="#" target="_blank">team modern</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="~/scripts/jquery-1.11.1.min.js"></script>
+    <script src="~/scripts/bootstrap.min.js"></script>
+    <!-- start scripts full page -->
+    <script src="~/scripts/fullpage.js"></script>
+    <script src="~/scripts/app.js"></script>
+    <!-- end scripts full page -->
+    <!-- star scripts owl-carousel -->
+    <script src="~/scripts/owl-carousel.min.js"></script>
+    <script src="~/scripts/superfish.min.js"></script>
+    <script src="~/scripts/main.js"></script>
+    <!-- end scripts owl-carousel -->
+    <script src="~/scripts/using.js"></script>
+    <script src="~/Scripts/jquery.min.js"></script>
+    <script src="~/Scripts/jquery.rateyo.min.js"></script>
+
+        @RenderSection("scripts", required: false)
+
+
+</body>
+</html>

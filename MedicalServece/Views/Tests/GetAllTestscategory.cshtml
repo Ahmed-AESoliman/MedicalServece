@@ -1,0 +1,45 @@
+﻿@model IEnumerable<MedicalServece.Models.Testscategory>
+
+@{
+    ViewBag.Title = "GetAllTestscategory";
+    Layout = "~/Views/Shared/_Manage.cshtml";
+}
+
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fas fa-table"></i>
+        Tests category
+        <a href="/Tests/CreateTestscategoryt.cshtml" class="btn btn-info pull-right fa fa-plus">Add New</a>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Tests Category</th>
+                        <th>Action</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.ActionLink(item.TC_category, "TestscategoryDetails", new { Code = item.Tcategory_Code })
+                            </td>
+                            <td>
+
+                                @Html.ActionLink("Edit", "EditTCcategor", new { Code = item.Tcategory_Code })|
+                                @Html.ActionLink("Delete", "DeleteTCcategor", new { Code = item.Tcategory_Code })
+                            </td>
+
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</div>

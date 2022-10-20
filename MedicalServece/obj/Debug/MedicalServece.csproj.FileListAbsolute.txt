@@ -1,0 +1,410 @@
+F:\MedicalServece\MedicalServece\bin\ApplicationInsights.config
+F:\MedicalServece\MedicalServece\bin\roslyn\csc.exe
+F:\MedicalServece\MedicalServece\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\MedicalServece\MedicalServece\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\MedicalServece\MedicalServece\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\MedicalServece\MedicalServece\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\MedicalServece\MedicalServece\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\MedicalServece\MedicalServece\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\MedicalServece\MedicalServece\bin\roslyn\System.Collections.Immutable.dll
+F:\MedicalServece\MedicalServece\bin\roslyn\System.Reflection.Metadata.dll
+F:\MedicalServece\MedicalServece\bin\roslyn\vbc.exe
+F:\MedicalServece\MedicalServece\bin\roslyn\VBCSCompiler.exe
+F:\MedicalServece\MedicalServece\bin\roslyn\VBCSCompiler.exe.config
+F:\MedicalServece\MedicalServece\bin\MedicalServece.dll.config
+F:\MedicalServece\MedicalServece\bin\MedicalServece.dll
+F:\MedicalServece\MedicalServece\bin\MedicalServece.pdb
+F:\MedicalServece\MedicalServece\bin\Antlr3.Runtime.dll
+F:\MedicalServece\MedicalServece\bin\EntityFramework.dll
+F:\MedicalServece\MedicalServece\bin\EntityFramework.SqlServer.dll
+F:\MedicalServece\MedicalServece\bin\Microsoft.AI.Agent.Intercept.dll
+F:\MedicalServece\MedicalServece\bin\Microsoft.AI.DependencyCollector.dll
+F:\MedicalServece\MedicalServece\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\MedicalServece\MedicalServece\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\MedicalServece\MedicalServece\bin\Microsoft.AI.Web.dll
+F:\MedicalServece\MedicalServece\bin\Microsoft.AI.WindowsServer.dll
+F:\MedicalServece\MedicalServece\bin\Microsoft.ApplicationInsights.dll
+F:\MedicalServece\MedicalServece\bin\Microsoft.AspNet.Identity.Core.dll
+F:\MedicalServece\MedicalServece\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\MedicalServece\MedicalServece\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\MedicalServece\MedicalServece\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\MedicalServece\MedicalServece\bin\Microsoft.Owin.dll
+F:\MedicalServece\MedicalServece\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.Cookies.dll
+F:\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.dll
+F:\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.Facebook.dll
+F:\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.Google.dll
+F:\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.OAuth.dll
+F:\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.Twitter.dll
+F:\MedicalServece\MedicalServece\bin\Microsoft.Web.Infrastructure.dll
+F:\MedicalServece\MedicalServece\bin\Newtonsoft.Json.dll
+F:\MedicalServece\MedicalServece\bin\Owin.dll
+F:\MedicalServece\MedicalServece\bin\System.Web.Helpers.dll
+F:\MedicalServece\MedicalServece\bin\System.Web.Mvc.dll
+F:\MedicalServece\MedicalServece\bin\System.Web.Optimization.dll
+F:\MedicalServece\MedicalServece\bin\System.Web.Razor.dll
+F:\MedicalServece\MedicalServece\bin\System.Web.WebPages.Deployment.dll
+F:\MedicalServece\MedicalServece\bin\System.Web.WebPages.dll
+F:\MedicalServece\MedicalServece\bin\System.Web.WebPages.Razor.dll
+F:\MedicalServece\MedicalServece\bin\WebGrease.dll
+F:\MedicalServece\MedicalServece\bin\Microsoft.AI.DependencyCollector.xml
+F:\MedicalServece\MedicalServece\bin\Microsoft.AI.ServerTelemetryChannel.xml
+F:\MedicalServece\MedicalServece\bin\Microsoft.AI.Web.xml
+F:\MedicalServece\MedicalServece\bin\Microsoft.AI.WindowsServer.xml
+F:\MedicalServece\MedicalServece\bin\Microsoft.ApplicationInsights.xml
+F:\MedicalServece\MedicalServece\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\MedicalServece\MedicalServece\bin\System.Web.Helpers.xml
+F:\MedicalServece\MedicalServece\bin\System.Web.Mvc.xml
+F:\MedicalServece\MedicalServece\bin\System.Web.Optimization.xml
+F:\MedicalServece\MedicalServece\bin\System.Web.Razor.xml
+F:\MedicalServece\MedicalServece\bin\System.Web.WebPages.xml
+F:\MedicalServece\MedicalServece\bin\System.Web.WebPages.Deployment.xml
+F:\MedicalServece\MedicalServece\bin\System.Web.WebPages.Razor.xml
+F:\MedicalServece\MedicalServece\bin\Antlr3.Runtime.pdb
+F:\MedicalServece\MedicalServece\bin\Newtonsoft.Json.xml
+F:\MedicalServece\MedicalServece\bin\EntityFramework.xml
+F:\MedicalServece\MedicalServece\bin\EntityFramework.SqlServer.xml
+F:\MedicalServece\MedicalServece\bin\Microsoft.AspNet.Identity.Core.xml
+F:\MedicalServece\MedicalServece\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\MedicalServece\MedicalServece\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\MedicalServece\MedicalServece\bin\Microsoft.Owin.xml
+F:\MedicalServece\MedicalServece\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.xml
+F:\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.Facebook.xml
+F:\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.Cookies.xml
+F:\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.OAuth.xml
+F:\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.Google.xml
+F:\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.Twitter.xml
+F:\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.dll
+F:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.pdb
+F:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.InitialCreate.resources
+F:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.csproj.GenerateResource.Cache
+E:\MedicalServece\MedicalServece\bin\ApplicationInsights.config
+E:\MedicalServece\MedicalServece\bin\roslyn\csc.exe
+E:\MedicalServece\MedicalServece\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\MedicalServece\MedicalServece\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\MedicalServece\MedicalServece\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\MedicalServece\MedicalServece\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\MedicalServece\MedicalServece\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\MedicalServece\MedicalServece\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\MedicalServece\MedicalServece\bin\roslyn\System.Collections.Immutable.dll
+E:\MedicalServece\MedicalServece\bin\roslyn\System.Reflection.Metadata.dll
+E:\MedicalServece\MedicalServece\bin\roslyn\vbc.exe
+E:\MedicalServece\MedicalServece\bin\roslyn\VBCSCompiler.exe
+E:\MedicalServece\MedicalServece\bin\roslyn\VBCSCompiler.exe.config
+E:\MedicalServece\MedicalServece\bin\MedicalServece.dll.config
+E:\MedicalServece\MedicalServece\bin\MedicalServece.dll
+E:\MedicalServece\MedicalServece\bin\MedicalServece.pdb
+E:\MedicalServece\MedicalServece\bin\Antlr3.Runtime.dll
+E:\MedicalServece\MedicalServece\bin\EntityFramework.dll
+E:\MedicalServece\MedicalServece\bin\EntityFramework.SqlServer.dll
+E:\MedicalServece\MedicalServece\bin\Microsoft.AI.Agent.Intercept.dll
+E:\MedicalServece\MedicalServece\bin\Microsoft.AI.DependencyCollector.dll
+E:\MedicalServece\MedicalServece\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\MedicalServece\MedicalServece\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\MedicalServece\MedicalServece\bin\Microsoft.AI.Web.dll
+E:\MedicalServece\MedicalServece\bin\Microsoft.AI.WindowsServer.dll
+E:\MedicalServece\MedicalServece\bin\Microsoft.ApplicationInsights.dll
+E:\MedicalServece\MedicalServece\bin\Microsoft.AspNet.Identity.Core.dll
+E:\MedicalServece\MedicalServece\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+E:\MedicalServece\MedicalServece\bin\Microsoft.AspNet.Identity.Owin.dll
+E:\MedicalServece\MedicalServece\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\MedicalServece\MedicalServece\bin\Microsoft.Owin.dll
+E:\MedicalServece\MedicalServece\bin\Microsoft.Owin.Host.SystemWeb.dll
+E:\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.Cookies.dll
+E:\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.dll
+E:\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.Facebook.dll
+E:\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.Google.dll
+E:\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+E:\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.OAuth.dll
+E:\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.Twitter.dll
+E:\MedicalServece\MedicalServece\bin\Microsoft.Web.Infrastructure.dll
+E:\MedicalServece\MedicalServece\bin\Newtonsoft.Json.dll
+E:\MedicalServece\MedicalServece\bin\Owin.dll
+E:\MedicalServece\MedicalServece\bin\System.Web.Helpers.dll
+E:\MedicalServece\MedicalServece\bin\System.Web.Mvc.dll
+E:\MedicalServece\MedicalServece\bin\System.Web.Optimization.dll
+E:\MedicalServece\MedicalServece\bin\System.Web.Razor.dll
+E:\MedicalServece\MedicalServece\bin\System.Web.WebPages.Deployment.dll
+E:\MedicalServece\MedicalServece\bin\System.Web.WebPages.dll
+E:\MedicalServece\MedicalServece\bin\System.Web.WebPages.Razor.dll
+E:\MedicalServece\MedicalServece\bin\WebGrease.dll
+E:\MedicalServece\MedicalServece\bin\Microsoft.AI.DependencyCollector.xml
+E:\MedicalServece\MedicalServece\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\MedicalServece\MedicalServece\bin\Microsoft.AI.Web.xml
+E:\MedicalServece\MedicalServece\bin\Microsoft.AI.WindowsServer.xml
+E:\MedicalServece\MedicalServece\bin\Microsoft.ApplicationInsights.xml
+E:\MedicalServece\MedicalServece\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\MedicalServece\MedicalServece\bin\System.Web.Helpers.xml
+E:\MedicalServece\MedicalServece\bin\System.Web.Mvc.xml
+E:\MedicalServece\MedicalServece\bin\System.Web.Optimization.xml
+E:\MedicalServece\MedicalServece\bin\System.Web.Razor.xml
+E:\MedicalServece\MedicalServece\bin\System.Web.WebPages.xml
+E:\MedicalServece\MedicalServece\bin\System.Web.WebPages.Deployment.xml
+E:\MedicalServece\MedicalServece\bin\System.Web.WebPages.Razor.xml
+E:\MedicalServece\MedicalServece\bin\Antlr3.Runtime.pdb
+E:\MedicalServece\MedicalServece\bin\Newtonsoft.Json.xml
+E:\MedicalServece\MedicalServece\bin\EntityFramework.xml
+E:\MedicalServece\MedicalServece\bin\EntityFramework.SqlServer.xml
+E:\MedicalServece\MedicalServece\bin\Microsoft.AspNet.Identity.Core.xml
+E:\MedicalServece\MedicalServece\bin\Microsoft.AspNet.Identity.Owin.xml
+E:\MedicalServece\MedicalServece\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+E:\MedicalServece\MedicalServece\bin\Microsoft.Owin.xml
+E:\MedicalServece\MedicalServece\bin\Microsoft.Owin.Host.SystemWeb.xml
+E:\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.xml
+E:\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.Facebook.xml
+E:\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.Cookies.xml
+E:\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.OAuth.xml
+E:\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.Google.xml
+E:\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.Twitter.xml
+E:\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+E:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.csprojResolveAssemblyReference.cache
+E:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.InitialCreate.resources
+E:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.csproj.GenerateResource.Cache
+E:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.dll
+E:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.pdb
+E:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.upSpecializationTable.resources
+E:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.UpdateUserTable.resources
+E:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.updateUserTable00.resources
+F:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.upSpecializationTable.resources
+F:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.UpdateUserTable.resources
+F:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.updateUserTable00.resources
+F:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.addClinicTable.resources
+F:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.addFileTables.resources
+F:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.ratingTbl.resources
+F:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.updateRatingTBL.resources
+F:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.updateRatingTBL2.resources
+F:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.updateRatingTBL3.resources
+F:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.updateRatingTBL4.resources
+F:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.updateNerssingTBl.resources
+F:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.UPdateTBL.resources
+F:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.UPdateTBL2.resources
+F:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.csprojResolveAssemblyReference.cache
+F:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.UPdateTBL3.resources
+F:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.updateTBL4.resources
+F:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.AddTestResultTBL01.resources
+F:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.AddTestResultTBL02.resources
+F:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.UpdateTBLTests.resources
+F:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.UpdateTBLTests01.resources
+F:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.UpdateTBLTests02.resources
+F:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.UpdateTBLTests03.resources
+F:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.UpdateTBLTests04.resources
+F:\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.addFileForDrtbl.resources
+F:\New folder\MedicalServece\MedicalServece\bin\ApplicationInsights.config
+F:\New folder\MedicalServece\MedicalServece\bin\roslyn\csc.exe
+F:\New folder\MedicalServece\MedicalServece\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\New folder\MedicalServece\MedicalServece\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\New folder\MedicalServece\MedicalServece\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\New folder\MedicalServece\MedicalServece\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\New folder\MedicalServece\MedicalServece\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\New folder\MedicalServece\MedicalServece\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\New folder\MedicalServece\MedicalServece\bin\roslyn\System.Collections.Immutable.dll
+F:\New folder\MedicalServece\MedicalServece\bin\roslyn\System.Reflection.Metadata.dll
+F:\New folder\MedicalServece\MedicalServece\bin\roslyn\vbc.exe
+F:\New folder\MedicalServece\MedicalServece\bin\roslyn\VBCSCompiler.exe
+F:\New folder\MedicalServece\MedicalServece\bin\roslyn\VBCSCompiler.exe.config
+F:\New folder\MedicalServece\MedicalServece\bin\MedicalServece.dll.config
+F:\New folder\MedicalServece\MedicalServece\bin\MedicalServece.dll
+F:\New folder\MedicalServece\MedicalServece\bin\MedicalServece.pdb
+F:\New folder\MedicalServece\MedicalServece\bin\Antlr3.Runtime.dll
+F:\New folder\MedicalServece\MedicalServece\bin\EntityFramework.dll
+F:\New folder\MedicalServece\MedicalServece\bin\EntityFramework.SqlServer.dll
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.AI.Agent.Intercept.dll
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.AI.DependencyCollector.dll
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.AI.Web.dll
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.AI.WindowsServer.dll
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.ApplicationInsights.dll
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.AspNet.Identity.Core.dll
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.Owin.dll
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.Cookies.dll
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.dll
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.Facebook.dll
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.Google.dll
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.OAuth.dll
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.Twitter.dll
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.Web.Infrastructure.dll
+F:\New folder\MedicalServece\MedicalServece\bin\Newtonsoft.Json.dll
+F:\New folder\MedicalServece\MedicalServece\bin\Owin.dll
+F:\New folder\MedicalServece\MedicalServece\bin\System.Web.Helpers.dll
+F:\New folder\MedicalServece\MedicalServece\bin\System.Web.Mvc.dll
+F:\New folder\MedicalServece\MedicalServece\bin\System.Web.Optimization.dll
+F:\New folder\MedicalServece\MedicalServece\bin\System.Web.Razor.dll
+F:\New folder\MedicalServece\MedicalServece\bin\System.Web.WebPages.Deployment.dll
+F:\New folder\MedicalServece\MedicalServece\bin\System.Web.WebPages.dll
+F:\New folder\MedicalServece\MedicalServece\bin\System.Web.WebPages.Razor.dll
+F:\New folder\MedicalServece\MedicalServece\bin\WebGrease.dll
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.AI.DependencyCollector.xml
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.AI.ServerTelemetryChannel.xml
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.AI.Web.xml
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.AI.WindowsServer.xml
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.ApplicationInsights.xml
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\New folder\MedicalServece\MedicalServece\bin\System.Web.Helpers.xml
+F:\New folder\MedicalServece\MedicalServece\bin\System.Web.Mvc.xml
+F:\New folder\MedicalServece\MedicalServece\bin\System.Web.Optimization.xml
+F:\New folder\MedicalServece\MedicalServece\bin\System.Web.Razor.xml
+F:\New folder\MedicalServece\MedicalServece\bin\System.Web.WebPages.xml
+F:\New folder\MedicalServece\MedicalServece\bin\System.Web.WebPages.Deployment.xml
+F:\New folder\MedicalServece\MedicalServece\bin\System.Web.WebPages.Razor.xml
+F:\New folder\MedicalServece\MedicalServece\bin\Antlr3.Runtime.pdb
+F:\New folder\MedicalServece\MedicalServece\bin\Newtonsoft.Json.xml
+F:\New folder\MedicalServece\MedicalServece\bin\EntityFramework.xml
+F:\New folder\MedicalServece\MedicalServece\bin\EntityFramework.SqlServer.xml
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.AspNet.Identity.Core.xml
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.Owin.xml
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.xml
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.Facebook.xml
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.Cookies.xml
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.OAuth.xml
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.Google.xml
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.Twitter.xml
+F:\New folder\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\New folder\MedicalServece\MedicalServece\obj\Debug\MedicalServece.csprojResolveAssemblyReference.cache
+F:\New folder\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.InitialCreate.resources
+F:\New folder\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.upSpecializationTable.resources
+F:\New folder\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.UpdateUserTable.resources
+F:\New folder\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.updateUserTable00.resources
+F:\New folder\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.addClinicTable.resources
+F:\New folder\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.addFileTables.resources
+F:\New folder\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.ratingTbl.resources
+F:\New folder\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.updateRatingTBL.resources
+F:\New folder\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.updateRatingTBL2.resources
+F:\New folder\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.updateRatingTBL3.resources
+F:\New folder\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.updateRatingTBL4.resources
+F:\New folder\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.updateNerssingTBl.resources
+F:\New folder\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.UPdateTBL.resources
+F:\New folder\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.UPdateTBL2.resources
+F:\New folder\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.UPdateTBL3.resources
+F:\New folder\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.updateTBL4.resources
+F:\New folder\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.AddTestResultTBL01.resources
+F:\New folder\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.AddTestResultTBL02.resources
+F:\New folder\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.UpdateTBLTests.resources
+F:\New folder\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.UpdateTBLTests01.resources
+F:\New folder\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.UpdateTBLTests02.resources
+F:\New folder\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.UpdateTBLTests03.resources
+F:\New folder\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.UpdateTBLTests04.resources
+F:\New folder\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.addFileForDrtbl.resources
+F:\New folder\MedicalServece\MedicalServece\obj\Debug\MedicalServece.csproj.GenerateResource.Cache
+F:\New folder\MedicalServece\MedicalServece\obj\Debug\MedicalServece.dll
+F:\New folder\MedicalServece\MedicalServece\obj\Debug\MedicalServece.pdb
+F:\New folder\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.updateTBLRating.resources
+F:\the end\MedicalServece\MedicalServece\bin\ApplicationInsights.config
+F:\the end\MedicalServece\MedicalServece\bin\roslyn\csc.exe
+F:\the end\MedicalServece\MedicalServece\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\the end\MedicalServece\MedicalServece\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\the end\MedicalServece\MedicalServece\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\the end\MedicalServece\MedicalServece\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\the end\MedicalServece\MedicalServece\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\the end\MedicalServece\MedicalServece\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\the end\MedicalServece\MedicalServece\bin\roslyn\System.Collections.Immutable.dll
+F:\the end\MedicalServece\MedicalServece\bin\roslyn\System.Reflection.Metadata.dll
+F:\the end\MedicalServece\MedicalServece\bin\roslyn\vbc.exe
+F:\the end\MedicalServece\MedicalServece\bin\roslyn\VBCSCompiler.exe
+F:\the end\MedicalServece\MedicalServece\bin\roslyn\VBCSCompiler.exe.config
+F:\the end\MedicalServece\MedicalServece\bin\MedicalServece.dll.config
+F:\the end\MedicalServece\MedicalServece\bin\MedicalServece.dll
+F:\the end\MedicalServece\MedicalServece\bin\MedicalServece.pdb
+F:\the end\MedicalServece\MedicalServece\bin\Antlr3.Runtime.dll
+F:\the end\MedicalServece\MedicalServece\bin\EntityFramework.dll
+F:\the end\MedicalServece\MedicalServece\bin\EntityFramework.SqlServer.dll
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.AI.Agent.Intercept.dll
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.AI.DependencyCollector.dll
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.AI.Web.dll
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.AI.WindowsServer.dll
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.ApplicationInsights.dll
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.AspNet.Identity.Core.dll
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.AspNet.Identity.Owin.dll
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.Owin.dll
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.Owin.Host.SystemWeb.dll
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.Cookies.dll
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.dll
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.Facebook.dll
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.Google.dll
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.OAuth.dll
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.Twitter.dll
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.Web.Infrastructure.dll
+F:\the end\MedicalServece\MedicalServece\bin\Newtonsoft.Json.dll
+F:\the end\MedicalServece\MedicalServece\bin\Owin.dll
+F:\the end\MedicalServece\MedicalServece\bin\System.Web.Helpers.dll
+F:\the end\MedicalServece\MedicalServece\bin\System.Web.Mvc.dll
+F:\the end\MedicalServece\MedicalServece\bin\System.Web.Optimization.dll
+F:\the end\MedicalServece\MedicalServece\bin\System.Web.Razor.dll
+F:\the end\MedicalServece\MedicalServece\bin\System.Web.WebPages.Deployment.dll
+F:\the end\MedicalServece\MedicalServece\bin\System.Web.WebPages.dll
+F:\the end\MedicalServece\MedicalServece\bin\System.Web.WebPages.Razor.dll
+F:\the end\MedicalServece\MedicalServece\bin\WebGrease.dll
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.AI.DependencyCollector.xml
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.AI.ServerTelemetryChannel.xml
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.AI.Web.xml
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.AI.WindowsServer.xml
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.ApplicationInsights.xml
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\the end\MedicalServece\MedicalServece\bin\System.Web.Helpers.xml
+F:\the end\MedicalServece\MedicalServece\bin\System.Web.Mvc.xml
+F:\the end\MedicalServece\MedicalServece\bin\System.Web.Optimization.xml
+F:\the end\MedicalServece\MedicalServece\bin\System.Web.Razor.xml
+F:\the end\MedicalServece\MedicalServece\bin\System.Web.WebPages.xml
+F:\the end\MedicalServece\MedicalServece\bin\System.Web.WebPages.Deployment.xml
+F:\the end\MedicalServece\MedicalServece\bin\System.Web.WebPages.Razor.xml
+F:\the end\MedicalServece\MedicalServece\bin\Antlr3.Runtime.pdb
+F:\the end\MedicalServece\MedicalServece\bin\Newtonsoft.Json.xml
+F:\the end\MedicalServece\MedicalServece\bin\EntityFramework.xml
+F:\the end\MedicalServece\MedicalServece\bin\EntityFramework.SqlServer.xml
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.AspNet.Identity.Core.xml
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.AspNet.Identity.Owin.xml
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.Owin.xml
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.Owin.Host.SystemWeb.xml
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.xml
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.Facebook.xml
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.Cookies.xml
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.OAuth.xml
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.Google.xml
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.Twitter.xml
+F:\the end\MedicalServece\MedicalServece\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+F:\the end\MedicalServece\MedicalServece\obj\Debug\MedicalServece.csprojResolveAssemblyReference.cache
+F:\the end\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.InitialCreate.resources
+F:\the end\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.upSpecializationTable.resources
+F:\the end\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.UpdateUserTable.resources
+F:\the end\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.updateUserTable00.resources
+F:\the end\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.addClinicTable.resources
+F:\the end\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.addFileTables.resources
+F:\the end\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.ratingTbl.resources
+F:\the end\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.updateRatingTBL.resources
+F:\the end\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.updateRatingTBL2.resources
+F:\the end\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.updateRatingTBL3.resources
+F:\the end\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.updateRatingTBL4.resources
+F:\the end\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.updateNerssingTBl.resources
+F:\the end\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.UPdateTBL.resources
+F:\the end\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.UPdateTBL2.resources
+F:\the end\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.UPdateTBL3.resources
+F:\the end\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.updateTBL4.resources
+F:\the end\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.AddTestResultTBL01.resources
+F:\the end\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.AddTestResultTBL02.resources
+F:\the end\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.UpdateTBLTests.resources
+F:\the end\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.UpdateTBLTests01.resources
+F:\the end\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.UpdateTBLTests02.resources
+F:\the end\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.UpdateTBLTests03.resources
+F:\the end\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.UpdateTBLTests04.resources
+F:\the end\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.addFileForDrtbl.resources
+F:\the end\MedicalServece\MedicalServece\obj\Debug\MedicalServece.Migrations.updateTBLRating.resources
+F:\the end\MedicalServece\MedicalServece\obj\Debug\MedicalServece.csproj.GenerateResource.Cache
+F:\the end\MedicalServece\MedicalServece\obj\Debug\MedicalServece.dll
+F:\the end\MedicalServece\MedicalServece\obj\Debug\MedicalServece.pdb

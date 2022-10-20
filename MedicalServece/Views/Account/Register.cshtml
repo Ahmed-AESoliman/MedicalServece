@@ -1,0 +1,73 @@
+﻿@model MedicalServece.Models.RegisterViewModel
+@{
+    ViewBag.Title = "Sign-Up";
+    Layout = null;
+}
+
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <!-- First mobile Meta -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- IE comatibility Meta -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>sign-up</title>
+    <link rel="stylesheet" href="/Content/font-awesome.min.css">
+    <link rel="stylesheet" href="/Content/bootstrap.css">
+    <link rel="stylesheet" href="/Content/animate.css">
+    <link rel="stylesheet" href="/Content/normalize.css">
+    <link rel="stylesheet" href="/Content/style.css">
+    <link rel="stylesheet" href="/Content/media.css">
+</head>
+<body>
+
+    <div class="slides-login">
+        <div class="container">
+            <div class="row">
+@using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "col-xs-9" }))
+{
+    @Html.AntiForgeryToken()
+    <div class="login-text col-xs-12 text-center" style="padding-top:0">
+        <h2>التسجيل</h2>
+        <div class="input-form">
+            @Html.ValidationSummary("", new { @class = "text-danger" })
+            <img class="img-2" src="~/images/icons8-person-48.png">
+            @Html.TextBoxFor(m => m.FullUserName, new { id = "ico1", placeholder = "الاسم بالكامل" })
+            <br />
+            <img class="img-2" src="~/images/icons8-gmail-48.png">
+            @Html.TextBoxFor(m => m.Email, new { id = "ico1", placeholder = "البريد الالكتروني" })
+            <br />
+            <img class="img-2" src="~/images/icons8-ringer-volume-48.png">
+            @Html.TextBoxFor(m => m.PhoneNumber, new { id = "ico1", placeholder = "رقم الهاتف" })
+            <br />
+            <img class="img-2" src="~/images/calendar.png">
+            @Html.TextBoxFor(m => m.Birthdate, new { @type = "date", @class = "datepicker", id = "ico1", placeholder = "تاريخ الميلاد" })
+            <br />
+            <img class="img-2" src="~/images/icons8-keepass-32.png">
+            @Html.PasswordFor(m => m.Password, new { id = "ico1", placeholder = "كلمه المرور" })
+            <br />
+            <img class="img-2" src="~/images/icons8-keepass-32.png">
+            @Html.PasswordFor(m => m.ConfirmPassword, new { id = "ico1", placeholder = "تاكيد كلمه المرور" })
+            <br />
+            <img class="img-2" src="~/images/GENDE.jpg">
+            @Html.DropDownList("Gender", null, "الجنس", new { @class = "type-persons", id = "ico1" })
+            <br />
+            <img class="img-2" src="~/images/icons8-report-card-48.png">
+            @Html.DropDownList("UserType", null, "نوع الحساب", new { @class = "type-persons", id = "ico1" })
+            <br />
+
+            <input type="submit" class="btn-1" value="تسجيل" />
+        </div>
+    </div>
+}
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="~/Scripts/jquery-1.11.1.min.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+﻿@model IEnumerable<MedicalServece.Models.RadiationLab>
+
+@{
+    ViewBag.Title = "Radiatin Center";
+    Layout = null;
+}
+
+<h2>RadiatinCenter</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.R_Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.R_Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.R_Address)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.R_Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.R_Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.R_Address)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.R_Code }) |
+            @Html.ActionLink("Details", "Details", new { id=item.R_Code }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.R_Code })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,27 @@
+﻿
+@model MedicalServece.Models.Radiationcategory
+
+@{
+    ViewBag.Title = "RadiationcategoryDetails";
+    Layout = "~/Views/Shared/_Manage.cshtml";
+}
+
+<div class="card mb-3">
+    <div class="card-header">
+        @Html.DisplayFor(mode=>Model.RC_category)
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+
+            @foreach (var item in Model.radiationLabContent)
+            {
+                <span class="btn btn-default border ">
+                    @Html.DisplayFor(modelitem => item.RC_Content)
+                </span>
+            }
+        </div>
+    </div>
+    <p class="card-footer">
+        @Html.ActionLink("Back to List", "GetAllRadiationcategoryt")
+    </p>
+</div>

@@ -1,0 +1,49 @@
+﻿@model MedicalServece.Models.TestsLab
+
+@{
+    ViewBag.Title = "DeleteTestsLab";
+    Layout = "~/Views/Shared/_Manage.cshtml";
+}
+
+<h2>DeleteTestsLab</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>TestsLab</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.T_Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.T_Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.T_Phone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.T_Phone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.T_Address)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.T_Address)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

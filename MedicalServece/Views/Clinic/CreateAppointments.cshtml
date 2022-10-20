@@ -1,0 +1,156 @@
+﻿@model List<MedicalServece.Models.Appointments>
+
+@{
+    ViewBag.Title = "CreateAppointments";
+    Layout = "~/Views/Shared/_Manage.cshtml";
+}
+@*<section>
+    <div id="time-days">
+        <div class="container">
+            <table id="tblCustomers" class="table" cellpadding="0" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>اليوم</th>
+                        <th style="width:150px">من</th>
+                        <th style="width:150px">الي</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                    <tr>
+                        <td>
+                            @Html.DropDownList("days", null, "days", new { id = "days", @class = "chosen-select" })
+                        </td>
+                        <td><input type="time" id="from" /></td>
+                        <td><input type="time" id="to" /></td>
+                        <td><input type="submit" id="btnAdd" value="Add" /></td>
+                    </tr>
+
+                </tbody>
+                <tfoot>
+
+                </tfoot>
+            </table>
+            <br />
+            <input type="button" id="btnSave" value="Save All" />
+        </div>
+    </div>
+</section>*@
+<div class="card mb-3">
+    <div class="card-body">
+        <ul class="list-unstyled row">
+            <li style="height: 50px;" class="col-md-3">
+                @Html.DropDownList("days", null, "اليوم", new { id = "days", @class = "select form-control" })
+            </li>
+            <li style="height: 50px;" class="col-md-3"><input type="time" id="from" class="form-control" /></li>
+            <li style="height: 50px;" class="col-md-3"><input type="time" id="to" class="form-control" /></li>
+            <li style="height: 50px;" class="col-md-3"><input type="submit" class="btn btn-info form-control" style="box-shadow:none;" id="btnAdd" value="+" /></li>
+        </ul>
+        <div class="table-responsive">
+            <table class="table " id="tblAppo" width="100%" cellpadding="0" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>اليومل</th>
+                        <th>من</th>
+                        <th>الي</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+                <tfoot>
+                    <tr>
+                        <td></td>
+                        <td>
+                            <input type="button" id="btnSave" class="btn btn-block btn-success form-control" value="حفظ" />
+                        </td>
+                        <td></td>
+
+                    </tr>
+                </tfoot>
+            </table>
+
+        </div>
+
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="http://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>
+<script type="text/javascript">
+    $("body").on("click", "#btnAdd", function () {
+        //Reference the Name and Country TextBoxes.
+        var da = $("#days");
+        var from = $("#from");
+        var to = $("#to");
+
+        //Get the reference of the Table's TBODY element.
+        var tbody = $("#tblAppo > tbody")[0];
+
+        //Add Row.
+        var row = tbody.insertRow(-1);
+
+        //Add  cell.
+        var cell = $(row.insertCell(-1));
+        cell.html(da.val());
+
+        cell = $(row.insertCell(-1));
+        cell.html(from.val());
+
+        cell = $(row.insertCell(-1));
+        cell.html(to.val());
+
+        //Add Button .
+        cell = $(row.insertCell(-1));
+        var btnRemove = $("<input class='btn btn-info pull-right'/>");
+        btnRemove.attr("type", "button");
+        btnRemove.attr("onclick", "Remove(this);");
+        btnRemove.val("Remove");
+        cell.append(btnRemove);
+
+        //Clear the TextBoxes.
+        da.val("");
+        from.val("");
+        to.val("");
+    });
+    function Remove(button) {
+
+        var row = $(button).closest("TR");
+        var name = $("TD", row).eq(0).html();
+        if (confirm("Do you want to delete this")) {
+
+            var table = $("#tblAppo")[0];
+
+            //Delete the Table row
+            table.deleteRow(row[0].rowIndex);
+        }
+    };
+    $("body").on("click", "#btnSave", function () {
+        //Loop through the Table rows and build a JSON array.
+        var Appointments = new Array();
+        $("#tblAppo tbody TR").each(function () {
+            var row = $(this);
+            var res = {};
+            res.Day = row.find("TD").eq(0).html();
+            res.TimeFrom = row.find("TD").eq(1).html();
+            res.TimeTo = row.find("TD").eq(2).html();
+            Appointments.push(res);
+
+
+        });
+
+        //Send the JSON array to Controller using AJAX.
+        $.ajax({
+            type: "POST",
+            url: "/Clinic/AddAppointments",
+            data: JSON.stringify(Appointments),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (r) {
+                alert(r + " record(s) inserted.");
+                location.replace("/Clinic/GetClinic")
+
+            }
+        });
+    });
+
+</script>

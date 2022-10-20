@@ -1,0 +1,47 @@
+﻿@model IEnumerable<MedicalServece.Models.MajorSpecialization>
+
+@{
+    ViewBag.Title = "GetMajorSpecialization";
+    Layout = "~/Views/Shared/_Manage.cshtml";
+}
+
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fas fa-table"></i>
+        Major Specialization
+        <a href="../Specialization/CreateMajorSpecialization" class="btn btn-info pull-right fa fa-plus">Add New</a>
+    </div>
+    <div class="card-body">
+        <div class="table-responsive">
+            <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Action</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.ActionLink(item.Title, "DetilesSpecialization", new { id = item.Major_ID })
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "EditMajorSpecialization", new { id = item.Major_ID }) |
+                                @Html.ActionLink("Delete", "DeleteMajorSpecialization", new { id = item.Major_ID })
+                            </td>
+
+                        </tr>
+                    }
+
+                </tbody>
+            </table>
+        </div>
+        
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"></script>

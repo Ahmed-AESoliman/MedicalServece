@@ -1,0 +1,168 @@
+﻿@model List<MedicalServece.Models.ResultFile>
+
+@{
+    ViewBag.Title = "AddTestsResult";
+    Layout = "~/Views/Shared/_Manage.cshtml";
+}
+  
+<link href="~/Content/chosen.min.css" rel="stylesheet" />
+@*<table id="tblCustomers" class="table" cellpadding="0" cellspacing="0">
+    <thead>
+        <tr>
+            <th style="width:150px">Result</th>
+            <th style="width:150px">Insert Date</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+
+        <tr>
+            <td><input type="text" id="result" /></td>
+            <td><input type="date" id="insert" /></td>
+            <td>
+                @Html.DropDownList("TC_Code", null, "TestName", new { id = "TC_Code", @class= "selec" })
+            </td>
+            <td><input type="submit" id="btnAdd" value="Add"/></td>
+        </tr>
+      
+    </tbody>
+    <tfoot>
+
+    </tfoot>
+</table>
+<br />*@                           
+
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fas fa-table"></i>
+        All Result
+        <a href="../File/TestsResultFile" class="btn btn-success pull-right fa fa-backward">عوده</a>
+    </div>
+    <div class="card-body">
+        <ul class="list-unstyled row">
+            <li style="height: 50px;"class="col-md-3"><input type="text" id="result" class="form-control" /></li>
+            <li style="height: 50px;"class="col-md-3"><input type="date" id="insert" class="form-control" /></li>
+            <li style="height: 50px;"class="col-md-3">
+                @Html.DropDownList("TC_Code", null, "اسم التحليل", new { id = "TC_Code", @class = "select form-control" })
+            </li>
+            <li style="height: 50px;" class="col-md-3"><input type="submit" class="btn btn-info form-control" style="box-shadow:none;" id="btnAdd" value="+" /></li>
+        </ul>
+        <div class="table-responsive">
+            <table class="table " id="tblResult" width="100%" cellpadding="0" cellspacing="0">
+                <thead>
+                    <tr>
+                        <th>نتيجه التحليل</th>
+                        <th>التاريخ</th>
+                        <th></th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+                <tfoot>
+                    <tr> 
+                        <td></td>
+                        <td>
+                        <input type="button" id="btnSave" class="btn btn-block btn-success form-control" value="حفظ" />
+                        </td>
+                        <td></td>
+
+                    </tr>
+                </tfoot>
+            </table>
+
+        </div>
+
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script type="text/javascript" src="http://ajax.cdnjs.com/ajax/libs/json2/20110223/json2.js"></script>
+<script src="~/Scripts/chosen.jquery.min.js"></script>
+
+<script type="text/javascript">
+    $("body").on("click", "#btnAdd", function () {
+        //Reference the TextBoxes.
+        var result = $("#result");
+        var insert = $("#insert");
+        var testname = $("#TC_Code");
+
+        var tbody = $("#tblResult > tbody")[0];
+
+        //Add Row.
+        var row = tbody.insertRow(-1);
+
+        //Add  cell.
+        var cell = $(row.insertCell(-1));
+        cell.html(result.val());
+
+        cell = $(row.insertCell(-1));
+        cell.html(insert.val());
+
+        cell = $(row.insertCell(-1));
+        cell.html(testname.val());
+        cell.attr("style", "Display:none")
+        //Add Button .
+        cell = $(row.insertCell(-1));
+        var btnRemove = $("<input class='btn btn-info pull-right'/>");
+        btnRemove.attr("type", "button");
+        btnRemove.attr("onclick", "Remove(this);");
+        btnRemove.val("Remove");
+        cell.append(btnRemove);
+
+        //Clear the TextBoxes.
+        result.val("");
+        insert.val("");
+        testname.val("");
+    });
+    function Remove(button) {
+
+        var row = $(button).closest("TR");
+        var name = $("TD", row).eq(0).html();
+        if (confirm("Do you want to delete this" )) {
+
+            var table = $("#tblResult")[0];
+
+            //Delete the Table row
+            table.deleteRow(row[0].rowIndex);
+        }
+    };
+    $("body").on("click", "#btnSave", function () {
+        //Loop through the Table rows and build a JSON array.
+        var ResultFile = new Array();
+        $("#tblResult tbody TR").each(function () {
+            var row = $(this);
+            var res = {};
+            res.Result = row.find("TD").eq(0).html();
+            res.InserDate = row.find("TD").eq(1).html();
+            res.TC_Code = row.find("TD").eq(2).html();
+            ResultFile.push(res);
+
+
+        });
+
+        //Send the JSON array to Controller using AJAX.
+        $.ajax({
+            type: "POST",
+            url: "/File/AddTestsResult",
+            data: JSON.stringify(ResultFile),
+            contentType: "application/json; charset=utf-8",
+            dataType: "json",
+            success: function (r) {
+                alert(r + " record(s) inserted.");
+                location.replace("/File/TestsResultFile")
+            }
+        });
+    });
+
+</script>
+<script type="text/javascript">
+    $('.select').chosen({
+        allow_single_deselect: true,
+        search_contains: true,
+        rtl:true,
+        width: '100%',
+        height:'100%'
+    });
+
+</script>                                                                                                                                           

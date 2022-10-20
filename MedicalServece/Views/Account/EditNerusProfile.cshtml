@@ -1,0 +1,109 @@
+﻿@model MedicalServece.Models.EditProfileDoctor
+
+@{
+    ViewBag.Title = "EditNerusProfile";
+    Layout = "~/Views/Shared/_Manage.cshtml";
+}
+
+<style>
+    ul {
+        list-style: none;
+        display: inline-block;
+        width: 100%;
+        padding: 0;
+    }
+
+    .area {
+        margin-top: 10px;
+        width: 100%;
+        height: 200px;
+        border-color: #007bff;
+    }
+</style>
+
+<div class="card mb-3">
+    <div class="card-body" dir="rtl">
+        <div class="table-responsive">
+            @using (Html.BeginForm())
+            {       @Html.AntiForgeryToken()
+
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="container">
+                    <div class="row">
+                        <div class="about col-lg-4 col-md-4 col-sm-5 col-xs-12">
+                            <ul class="icons">
+                                <li><img id="online2" name="ImageUser" src="~/images/online.png" class="img-responsive img-thumbnail pull-right"></li>
+                            </ul>
+
+                            <ul class="info">
+                                <li class="pull-right"><h3><span>نبذه</span> <samp style="color:#007bff">عن</samp> الدكتور </h3></li>
+                                <li class="pull-right">
+                                    @Html.TextAreaFor(model => model.Summray, new { @class = "area" })
+                                    @Html.ValidationMessageFor(model => model.Summray, "", new { @class = "text-danger" })
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="form-edit col-lg-8 col-md-8 col-sm-7 col-xs-12">
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.FullUserName, new { htmlAttributes = new { placeholder = "الاسم بالكامل", @class = "form-control" } })
+                                @Html.ValidationMessageFor(model => model.FullUserName, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.PhoneNumber, new { htmlAttributes = new { @class = "form-control", placeholder = "رقم الهاتف" } })
+                                @Html.ValidationMessageFor(model => model.PhoneNumber, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", placeholder = "البريد الالكتروني" } })
+                                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+
+                                @Html.EditorFor(model => model.Birthdate, new { htmlAttributes = new { @type = "date", @class = "form-control", placeholder = "تاريخ الميلاد" } })
+                                @Html.ValidationMessageFor(model => model.Birthdate, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+
+                                @Html.DropDownList("Gender", null, new { @class = "form-control", placeholder = "الجنس" })
+                                @Html.ValidationMessageFor(model => model.Gender, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+
+                                @Html.EditorFor(model => model.Degree, new { htmlAttributes = new { @class = "form-control", placeholder = "المستوي التعليمي" } })
+                                @Html.ValidationMessageFor(model => model.Degree, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+
+                                @Html.EditorFor(model => model.Country, new { htmlAttributes = new { @class = "form-control", placeholder = "بلد التخرج" } })
+                                @Html.ValidationMessageFor(model => model.Country, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+
+                                @Html.EditorFor(model => model.ProfessionalTitle, new { htmlAttributes = new { @class = "form-control", placeholder = "المستوي المهني" } })
+                                @Html.ValidationMessageFor(model => model.ProfessionalTitle, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+
+                                @Html.EditorFor(model => model.FullProfessionalTitle, new { htmlAttributes = new { @class = "form-control", placeholder = "الاسم المهني بالكامل" } })
+                                @Html.ValidationMessageFor(model => model.FullProfessionalTitle, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+
+                                @Html.EditorFor(model => model.ExYear, new { htmlAttributes = new { @Type = "date", @class = "form-control", placeholder = "تاريخ التخرج " } })
+                                @Html.ValidationMessageFor(model => model.ExYear, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+
+                                @Html.DropDownList("MajorSpecialization", null, new { @class = "form-control", placeholder = "التخصص الرئيسي " })
+                                @Html.ValidationMessageFor(model => model.MajorSpecialization, "", new { @class = "text-danger" })
+                            </div>
+                            <div class="form-group">
+                                <input type="submit" value="حفظ" class="btn btn-primary form-control" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+

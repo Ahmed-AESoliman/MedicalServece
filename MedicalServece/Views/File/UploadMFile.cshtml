@@ -1,0 +1,140 @@
+﻿@model MedicalServece.Models.FileContent
+
+@{
+    ViewBag.Title = "UploadMFile";
+    Layout = "~/Views/Shared/_Manage.cshtml";
+}
+
+<style>
+ [type="file"] {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  white-space: nowrap;
+  width: 1px; 
+}
+    [type="file"] + label {
+    background-color: #007bff;
+    border-radius: 3.5px;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    transition: background-color 0.3s;
+    width: 100%;
+    text-align: center;
+}
+ 
+[type="file"]:focus + label,
+[type="file"] + label:hover {
+    background-color: #12b1ff;
+}
+ 
+[type="file"]:focus + label {
+  outline: 1px dotted #000;
+  outline: -webkit-focus-ring-color auto 5px;
+}
+[type="file"] + label * {
+  pointer-events: none;
+}
+.js [type="file"] {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+  white-space: nowrap;
+  width: 1px;
+}
+ 
+.no-js [type="file"] + label {
+  display: none;
+}
+.form-inline .form-control{
+    width:100%;
+}
+.form-inline .form-group{
+    height:40px
+}
+</style>
+
+<div class="card mb-3">
+    <div class="card-header">
+        <i class="fas"></i>
+        اضافه بيانات الملف علي هيئه صور 
+        <a href="../File/TestsResultFile" class="btn btn-success pull-right fa fa-backward"> عوده</a>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <form action="/File/UploadMFile" method="post" enctype="multipart/form-data" class="form-inline col-md-12">
+                @Html.AntiForgeryToken()
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                <div class="form-group col-md-4">
+                    @Html.DropDownList("Cat_file", null, "تصنيف الملفات", new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.Cat_file, "", new { @class = "text-danger" })
+                </div>
+
+                <div class="form-group col-md-4">
+                    @Html.ValidationMessageFor(model => model.filePath, "", new { @class = "text-danger" })
+
+                    <input type="file" name="files" id="file" multiple data-multiple-caption="{count} files selected" />
+                    <label for="file">choose a file</label>
+                </div>
+                <div class="form-group col-md-4">
+                    <input type="submit" value="Create" class="btn btn-primary form-control" />
+                </div>
+            </form>
+            <div id="preview" class="col-md-12"style="margin-top: 30px;">
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script>
+    function previewImages() {
+
+        var preview = document.querySelector('#preview');
+
+        if (this.files) {
+            [].forEach.call(this.files, readAndPreview);
+        }
+
+        function readAndPreview(file) {
+
+            if (!/\.(jpe?g|png|gif)$/i.test(file.name)) {
+                return alert(file.name + " is not an image");
+            } // else...
+
+            var reader = new FileReader();
+
+            reader.addEventListener("load", function () {
+                var image = new Image();
+                image.height = 100;
+                image.title = file.name;
+                image.src = this.result;
+                image.style="margin:5px"
+                image.className = "img-thumbnail col-md-2";
+                preview.appendChild(image);
+            });
+
+            reader.readAsDataURL(file);
+
+        }
+
+    }
+
+    document.querySelector('#file').addEventListener("change", previewImages);
+
+</script>
